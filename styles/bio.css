@@ -1,0 +1,212 @@
+@font-face {
+  font-family: "Avenir";
+  src: url("/assets/Font/AvenirNextLTPro-Bold.otf") format("opentype");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("/assets/Font/AvenirNextLTPro-Regular.otf") format("opentype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("/assets/Font/AvenirNextLTPro-Demi.otf") format("opentype");
+  font-weight: 600;
+}
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  font-family: "Avenir";
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  background-color: #323232;
+  color: white;
+  list-style-type: none;
+}
+@media screen and (min-width: 768px) {
+  .navbar {
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+    padding: 1.3rem;
+    padding-left: 3rem;
+  }
+}
+.navbar a {
+  text-decoration: none;
+}
+.navbar__options a, .navbar__options ul {
+  list-style-type: none;
+  color: white;
+}
+.navbar__title {
+  display: flex;
+  justify-content: center;
+  padding-top: 1rem;
+  padding-bottom: 0;
+}
+.navbar__title img {
+  height: 1.3rem;
+}
+@media screen and (min-width: 768px) {
+  .navbar__title img {
+    height: 1.5rem;
+  }
+}
+.navbar__option--list {
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+}
+@media screen and (min-width: 768px) {
+  .navbar__option--list {
+    display: flex;
+    gap: 2rem;
+    font-size: 1.1rem;
+  }
+}
+.navbar__options--option1:hover {
+  border-bottom: 3rem white;
+}
+
+.hero {
+  background-image: url(/assets/Images/hero-bio.jpg);
+  background-size: cover;
+}
+.hero__bg {
+  background-color: rgba(50, 50, 50, 0.5);
+  height: 15rem;
+  display: flex;
+  align-items: center;
+}
+.hero__title {
+  margin: 0;
+  padding: 0;
+  font-family: "Avenir";
+  font-weight: 600;
+  padding-left: 1rem;
+  font-size: 1.8rem;
+  position: relative;
+  color: white;
+}
+
+.about {
+  height: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.about__title1 {
+  font-family: "Avenir";
+  font-weight: 600;
+  font-size: 1.8rem;
+}
+.about__image {
+  display: flex;
+  align-items: center;
+  height: 13rem;
+  width: 100%;
+}
+.about__quote {
+  font-family: "Avenir";
+  font-weight: 600;
+  font-size: 1.12rem;
+  line-height: 1.9rem;
+}
+.about__quoteby {
+  font-family: "Avenir";
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+.about__title2 {
+  font-family: "Avenir";
+  font-weight: 400;
+  font-style: bold;
+}
+.about__para1, .about__para2 {
+  font-family: "Avenir";
+  font-weight: 400;
+  line-height: 1.4rem;
+  font-size: 1.05rem;
+}
+
+.gallery {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  background-color: #FAFAFA;
+}
+.gallery__title {
+  font-family: "Avenir";
+  font-weight: 600;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.gallery__item {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+.gallery__item img {
+  height: 12rem;
+  width: 100%;
+}
+
+.footer {
+  background-color: #323232;
+  color: white;
+  font-family: "Avenir";
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.footer__head {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.footer__head--title {
+  font-family: "Avenir";
+  font-weight: 400;
+  font-style: normal;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  font-size: 2rem;
+  color: white;
+}
+.footer__media {
+  display: flex;
+  align-content: flex-start;
+}
+.footer__media--insta, .footer__media--facebook, .footer__media--twitter {
+  height: 2rem;
+  width: 2rem;
+  padding: 1.2rem;
+}
+.footer__media--img {
+  height: 1.6rem;
+  padding: 1.2rem;
+}
+.footer__reachout1, .footer__reachout2, .footer__reachout3 {
+  font-family: "Avenir";
+  font-weight: 400;
+  font-size: 1rem;
+  padding: 0.5rem;
+  line-height: 1.3rem;
+}
+.footer__reachout1--title, .footer__reachout1--info, .footer__reachout1--email, .footer__reachout2--title, .footer__reachout2--info, .footer__reachout2--email, .footer__reachout3--title, .footer__reachout3--info, .footer__reachout3--email {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding: 0.5rem;
+}
+.footer__copyright--info {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  font-family: "Avenir";
+  font-weight: 400;
+  font-size: 0.7rem;
+  padding-left: 1rem;
+}/*# sourceMappingURL=bio.css.map */

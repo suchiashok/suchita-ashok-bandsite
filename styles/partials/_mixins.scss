@@ -1,0 +1,28 @@
+@use 'variables' as *;
+
+
+// Breakpoints
+@mixin tablet{
+    @media screen and (min-width: $tablet-breakpoint)
+    {
+        @content;
+    }    
+}
+
+@mixin desktop {
+    @media screen and (min-width: $desktop-brekpoint)
+    {
+        @content;
+    }
+}
+
+//reset element margins/paddings
+@mixin fit {
+    margin: 0;
+    padding: 0;
+}
+
+@mixin margin-reset {
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
