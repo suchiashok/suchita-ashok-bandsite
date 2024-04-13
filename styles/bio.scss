@@ -79,15 +79,23 @@ html, body
 {
     background-image: url(/assets/Images/hero-bio.jpg);
     background-size: cover;
+    
+        @include tablet
+        {
+            height: calc(20vw + 370px);
+        }
 
-    
-    
         &__bg
         {
             background-color: rgba($header-footer-background, 0.5);
             height: 15rem;
             display: flex;
             align-items: center;
+
+                @include tablet
+                {
+                    height: calc(20vw + 370px);
+                }
 
         }
      
@@ -100,6 +108,12 @@ html, body
             font-size: 1.8rem;
             position: relative;
             color: $body-text;        
+        
+                @include tablet
+                {
+                    font-size: 4.2rem;
+                    padding: 1.9rem;
+                }
         }
 }
 .about
@@ -107,54 +121,123 @@ html, body
     height: auto;
     padding-left: 1rem;
     padding-right: 1rem;
+        
+        @include tablet
+        {
+            padding-left: 2.2rem;
+            padding-right: 2.2rem;
+        }
 
-        &__title1
+    &__title
+    {
+    font-family: "Avenir";
+    font-weight: 600;
+    font-size: 1.8rem;
+
+        @include tablet
+            {
+             font-size: 2.7rem;
+            }
+    }
+
+    &__part1
+    {
+        @include tablet
         {
-            font-family: "Avenir";
-            font-weight: 600;
-            font-size: 1.8rem;
+            padding-left: 3.5rem;
+            padding-right: 3.5rem; 
         }
-        &__image
+
+        &--image
         {
-            display: flex;
-            align-items: center;
             height: 13rem;
-            width: 100%;
-            
+            width: 100%;   
+
+                @include tablet
+                {
+                    height: 23rem;
+                }         
         }
-        &__quote
+        &--quote
         {
             font-family: "Avenir";
             font-weight: 600;
             font-size: 1.12rem;
             line-height: 1.9rem;
+
+                @include tablet
+                {
+                    font-size: 1.65rem;
+                    line-height: 2.4rem;
+                }
         }
-        &__quoteby
+        &--quoteby
         {
             font-family: "Avenir";
             font-weight: 600;
             font-size: 1.1rem;
+
+                @include tablet
+                {
+                    font-size: 1.2rem
+                }
     
         }
-        &__title2
+    }
+    &__part2
+    {
+        @include tablet
+        {
+            padding-left: 3.5rem;
+            padding-right: 3.5rem; 
+            padding-top: 1.8rem;
+        }
+
+        &--title2
         {
             font-family: "Avenir";
             font-weight: 400;
             font-style: bold;
+
+                @include tablet
+                {   
+                    @include fit;
+                    font-weight: 600;
+                    font-size: 1.9rem;
+                }
         }
-        &__para1, &__para2
+
+        &--para
         {
             font-family: "Avenir";
             font-weight: 400;
             line-height: 1.4rem;
             font-size: 1.05rem;
+
+                @include tablet
+                {
+                    display: flex;
+                    gap: 2rem;
+                    font-size: 1.12rem;
+                    line-height: 1.7rem;
+                    padding-top: 1.2rem;
+                    padding-bottom: 1.2rem;
+                }
         }
-}
+    }
+} 
 .gallery
 {
     padding-left: 1rem;
     padding-right: 1rem;
     background-color: #FAFAFA;
+
+    @include tablet {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-content: space-evenly;
+    }
 
         &__title
         {
@@ -190,6 +273,7 @@ html, body
         padding-bottom: 1.5rem;
         padding-left: 1rem;
         padding-right: 1rem;
+
             &--title
             {
             font-family: "Avenir";
