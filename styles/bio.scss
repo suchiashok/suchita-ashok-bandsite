@@ -40,11 +40,11 @@ html, body
                 img
                 {
                     height: auto;
+                }
 
-                        @include tablet
-                        {
-                            height: auto;
-                        }
+                @include desktop
+                {
+                    padding-left: 4.2rem;
                 }
         }
         &__options
@@ -52,26 +52,41 @@ html, body
             &--list
             {
             display: flex;
-            justify-content: space-around;;
+            justify-content: space-around;
             padding: 0;
-
+        
                     @include tablet
                     {
                         display: flex;
                         gap: 2rem;
                         font-size: 1.1rem; 
+                        padding-top: 0.9rem;
+                    }
+
+                    @include desktop
+                    {
+                        font-size: 0.9rem;
                     }
             }
             &--option1, &--option2
             {
                 list-style-type: none;
                 color: $header-footer-text;
-                box-sizing: border-box;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                
+    
+                &:hover
+                {
+                    border-bottom: 0.1rem solid white;
+                }
+
+                a
+                {
+                text-decoration: none;
+                }
             }
-        }
-        &__options--option1:hover
-        {
-            border-bottom: 3rem white;
         }
 }
 .hero
@@ -113,6 +128,12 @@ html, body
                     font-size: 4.2rem;
                     padding: 1.9rem;
                 }
+
+                @include desktop
+                {
+                    font-size: 3.5rem;
+                    padding-left: 6.5rem;
+                }
         }
 }
 .about
@@ -127,6 +148,12 @@ html, body
             padding-right: 2.2rem;
         }
 
+        @include desktop
+        {
+            padding-left: 10.2rem;
+            padding-right: 10.2rem;
+        }
+
     &__title
     {
     font-family: "Avenir";
@@ -134,9 +161,15 @@ html, body
     font-size: 1.8rem;
 
         @include tablet
-            {
-             font-size: 2.7rem;
-            }
+        {
+            font-size: 2.7rem;
+        }
+        @include desktop
+        {
+            font-size: 2.09rem;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
     }
 
     &__part1
@@ -150,12 +183,13 @@ html, body
         &--image
         {
             height: auto;
-            width: 100%;   
-
-                @include tablet
+            width: 100%;  
+            
+                @include desktop
                 {
-                    height: auto;
-                }         
+                    height: calc(55vh - 30px);
+                    width: calc(72vw - 50px);
+                }
         }
         &--quote
         {
@@ -169,6 +203,13 @@ html, body
                     font-size: 1.65rem;
                     line-height: 2.4rem;
                 }
+
+                @include desktop
+                {
+                    font-size: 1.2rem;
+                    line-height: 1.8rem;
+                    margin-right: 9rem;
+                }
         }
         &--quoteby
         {
@@ -179,6 +220,10 @@ html, body
                 @include tablet
                 {
                     font-size: 1.2rem
+                }
+                @include desktop
+                {
+                    font-size: 0.8rem;
                 }
     
         }
@@ -204,6 +249,11 @@ html, body
                     font-weight: 600;
                     font-size: 1.9rem;
                 }
+                @include desktop
+                {
+                    font-weight: 400;
+                    font-size: 1.4rem;
+                }
         }
 
         &--para
@@ -222,6 +272,11 @@ html, body
                     padding-top: 1.2rem;
                     padding-bottom: 1.2rem;
                 }
+                @include desktop
+                {
+                    font-size: 0.9rem;
+                    line-height: 1.4rem;
+                }
         }
     }
 } 
@@ -234,6 +289,11 @@ html, body
     @include tablet 
     {
         padding: 1.3rem;
+    }
+    @include desktop
+    {
+        padding-left: 5.7rem;
+        padding-right: 5.7rem;
     }
         &__title
         {
@@ -249,6 +309,10 @@ html, body
                     font-weight: 600;
                     padding: 1.8rem;
                 }
+                @include desktop
+                {
+                    font-size: 2.1rem;
+                }
         }
         &__photos
         {   
@@ -261,8 +325,6 @@ html, body
                 justify-content: space-evenly;
                 flex-direction: row;
                 flex-wrap: wrap;
-                
-
             }
             &--item
             {
@@ -297,7 +359,12 @@ html, body
     font-family: "Avenir";
     padding: 1.2rem 0.5rem 1.2rem 0.6rem;
 
-    &__test
+        @include desktop
+        {
+            padding: 2rem 0.5rem 1.2rem 5.5rem;
+        }
+
+    &__socialcontent
     {
         display: flex;
         flex-direction: row;
@@ -306,7 +373,7 @@ html, body
 
     address
     {
-        font-style: normal; //Resetting the default style
+        font-style: normal; /* Resetting the default (italic) style */
     }
    
     &__head
@@ -331,6 +398,12 @@ html, body
                     fonr-weight: 700;
                     font-size: 2.5rem;
                 }
+
+                @include desktop
+                {
+                    font-weight: 400;
+                    font-size: 2rem;
+                }
             }
     }
 
@@ -343,6 +416,11 @@ html, body
             {
                 display: flex;
                 align-content: flex-start;
+            }
+            
+            @include desktop
+            {
+                padding-left: 1.2rem;
             }
     
         &--insta, &--facebook, &--twitter
@@ -357,6 +435,13 @@ html, body
                     width: 1.6rem;
                     padding-top: 2.5rem;
                 }
+
+                @include desktop
+                {
+                    height: 1.3rem;
+                    width: 1.3rem;
+                    padding-top: 2.1rem;
+                }
         }
         &--bandsitelogo
         {
@@ -370,6 +455,12 @@ html, body
                    top: 2.7rem;
                    right: 2rem; 
                 }
+
+                @include desktop
+                {
+                    height: 1rem;
+                    right: 5.5rem;
+                }
         }
     }
     &__contactbox
@@ -379,8 +470,12 @@ html, body
                 display: flex;
                 flex-wrap: wrap;
                 padding-top: 1rem;
-                padding-bottom: 1rem;
-                
+                padding-bottom: 1rem; 
+            }
+
+            @include desktop
+            {
+                gap: 1.75rem;
             }
         &--reachout1, &--reachout2, &--reachout3
         {
@@ -394,7 +489,12 @@ html, body
                 {
                     font-size: 0.95rem;
                     line-height: 1.5rem;
+                }
 
+                @include desktop
+                {
+                    font-size: 0.8rem;
+                    line-height: 1.25rem;
                 }
         }
         &--reachout1-title, &--reachout1-info, &--reachout1-email,
@@ -422,6 +522,13 @@ html, body
                 font-size: 0.95rem;
                 padding-top: 1.3rem;
                 padding-bottom: 1.3rem;
+                }
+
+                @include desktop
+                {
+                    font-size: 0.8rem;
+                    padding-top: 1.5rem;
+                    padding-bottom: 1.5rem;
                 }
         }
     }
