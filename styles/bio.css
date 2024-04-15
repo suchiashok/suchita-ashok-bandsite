@@ -24,7 +24,6 @@ html, body {
   display: flex;
   flex-direction: column;
   background-color: #323232;
-  color: white;
   list-style-type: none;
 }
 @media screen and (min-width: 768px) {
@@ -33,11 +32,13 @@ html, body {
     flex-direction: row;
     gap: 5rem;
     padding: 1.3rem;
+    padding-top: 0.8rem;
     padding-left: 3rem;
   }
 }
 .navbar a {
   text-decoration: none;
+  color: white;
 }
 .navbar__title {
   display: flex;
@@ -47,6 +48,17 @@ html, body {
 }
 .navbar__title img {
   height: auto;
+  margin-top: 0.5rem;
+}
+@media screen and (min-width: 768px) {
+  .navbar__title img {
+    margin-top: 1rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .navbar__title img {
+    marrgin-top: 1.1rem;
+  }
 }
 @media screen and (min-width: 1280px) {
   .navbar__title {
@@ -55,15 +67,23 @@ html, body {
 }
 .navbar__options--list {
   display: flex;
+  align-items: center;
   justify-content: space-around;
+  list-style: none;
+  margin: 0;
   padding: 0;
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
+}
+.navbar__options--list a {
+  display: block;
 }
 @media screen and (min-width: 768px) {
   .navbar__options--list {
     display: flex;
     gap: 2rem;
-    font-size: 1.1rem;
-    padding-top: 0.9rem;
+    font-size: 1rem;
+    padding-top: 1.9rem;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -73,16 +93,12 @@ html, body {
 }
 .navbar__options--option1, .navbar__options--option2 {
   list-style-type: none;
-  color: white;
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
 .navbar__options--option1:hover, .navbar__options--option2:hover {
-  border-bottom: 0.1rem solid white;
-}
-.navbar__options--option1 a, .navbar__options--option2 a {
-  text-decoration: none;
+  transform: scale(1.09);
 }
 
 .hero {
@@ -174,8 +190,8 @@ html, body {
 }
 @media screen and (min-width: 1280px) {
   .about__part1--image {
-    height: calc(55vh - 30px);
-    width: calc(72vw - 50px);
+    height: calc(60vh - 220px);
+    width: calc(72vw - 100px);
   }
 }
 .about__part1--quote {
@@ -321,6 +337,10 @@ html, body {
 .gallery__photos--item img {
   height: auto;
   width: 100%;
+  filter: grayscale(100%);
+}
+.gallery__photos--item img:hover {
+  filter: grayscale(0%);
 }
 @media screen and (min-width: 768px) {
   .gallery__photos--item img {
@@ -397,6 +417,9 @@ html, body {
   height: 2rem;
   width: 2rem;
   padding: 1.2rem;
+}
+.footer__media--insta:hover, .footer__media--facebook:hover, .footer__media--twitter:hover {
+  transform: scale(1.1);
 }
 @media screen and (min-width: 768px) {
   .footer__media--insta, .footer__media--facebook, .footer__media--twitter {

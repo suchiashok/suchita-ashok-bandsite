@@ -15,7 +15,6 @@ html, body
     display: flex;
     flex-direction: column;
     background-color: $header-footer-background;
-    color: $header-footer-text;
     list-style-type: none;
 
         @include tablet
@@ -24,12 +23,14 @@ html, body
             flex-direction: row;
             gap: 5rem;
             padding: 1.3rem;
+            padding-top: 0.8rem;
             padding-left: 3rem;
         }
-    a
-    {
-        text-decoration: none;
-    }
+
+        a{
+            text-decoration: none;
+            color: $header-footer-text;
+        }
 
         &__title
         {
@@ -40,6 +41,17 @@ html, body
                 img
                 {
                     height: auto;
+                    margin-top: 0.5rem;
+
+                    @include tablet
+                    {
+                        margin-top: 1rem;
+                    }
+
+                    @include desktop
+                    {
+                        marrgin-top: 1.1rem;
+                    }
                 }
 
                 @include desktop
@@ -52,15 +64,24 @@ html, body
             &--list
             {
             display: flex;
+            align-items: center;
             justify-content: space-around;
-            padding: 0;
-        
+            list-style: none;
+            @include fit;
+            padding-top: 0.7rem;
+            padding-bottom: 0.7rem;
+
+            a
+            {
+                display: block;
+            }
+             
                     @include tablet
                     {
                         display: flex;
                         gap: 2rem;
-                        font-size: 1.1rem; 
-                        padding-top: 0.9rem;
+                        font-size: 1rem; 
+                        padding-top: 1.9rem;
                     }
 
                     @include desktop
@@ -68,24 +89,18 @@ html, body
                         font-size: 0.9rem;
                     }
             }
+
             &--option1, &--option2
             {
-                list-style-type: none;
-                color: $header-footer-text;
-                display: flex;
-                justify-content: space-around;
-                align-items: center;
-                
-    
-                &:hover
-                {
-                    border-bottom: 0.1rem solid white;
-                }
-
-                a
-                {
-                text-decoration: none;
-                }
+            list-style-type: none;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        
+            &:hover 
+            {
+             transform: scale(1.09);
+            }
             }
         }
 }
@@ -187,8 +202,9 @@ html, body
             
                 @include desktop
                 {
-                    height: calc(55vh - 30px);
-                    width: calc(72vw - 50px);
+                    height: calc(60vh - 220px);
+                    width: calc(72vw - 100px);
+            
                 }
         }
         &--quote
@@ -340,6 +356,12 @@ html, body
                 {
                     height: auto;
                     width: 100%;
+                    filter: grayscale(100%);
+                    
+                    &:hover
+                    {
+                        filter: grayscale(0%);
+                    }
                         
                         @include tablet
                         {
@@ -412,6 +434,7 @@ html, body
         display: flex;
         align-content: flex-start;
 
+
             @include tablet
             {
                 display: flex;
@@ -428,6 +451,11 @@ html, body
             height: 2rem;
             width: 2rem;
             padding: 1.2rem;
+
+            &:hover
+            {
+            transform: scale(1.1);
+            }
 
                 @include tablet
                 {
