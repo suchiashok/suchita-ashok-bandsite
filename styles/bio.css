@@ -110,6 +110,11 @@ html, body {
     height: calc(20vw + 370px);
   }
 }
+@media screen and (min-width: 1280px) {
+  .hero {
+    height: calc(45vw - 25px);
+  }
+}
 .hero__bg {
   background-color: rgba(50, 50, 50, 0.5);
   height: 15rem;
@@ -119,6 +124,11 @@ html, body {
 @media screen and (min-width: 768px) {
   .hero__bg {
     height: calc(20vw + 370px);
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero__bg {
+    height: calc(45vw - 25px);
   }
 }
 .hero__title {
@@ -364,8 +374,13 @@ html, body {
 }
 .footer__socialcontent {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
+}
+@media screen and (min-width: 768px) {
+  .footer__socialcontent {
+    flex-direction: row;
+  }
 }
 .footer address {
   font-style: normal; /* Resetting the default (italic) style */

@@ -104,6 +104,7 @@ html, body
             }
         }
 }
+
 .hero
 {
     background-image: url(/assets/Images/hero-bio.jpg);
@@ -112,6 +113,11 @@ html, body
         @include tablet
         {
             height: calc(20vw + 370px);
+        }
+
+        @include desktop
+        {
+            height: calc(45vw - 25px);
         }
 
         &__bg
@@ -124,6 +130,11 @@ html, body
                 @include tablet
                 {
                     height: calc(20vw + 370px);
+                }
+
+                @include desktop
+                {
+                    height: calc(45vw - 25px);
                 }
 
         }
@@ -151,6 +162,7 @@ html, body
                 }
         }
 }
+
 .about
 {
     height: auto;
@@ -296,6 +308,7 @@ html, body
         }
     }
 } 
+
 .gallery
 {
     
@@ -372,6 +385,7 @@ html, body
             }
         }
 }
+
 .footer
 {
     @include fit;
@@ -389,8 +403,14 @@ html, body
     &__socialcontent
     {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         flex-wrap: wrap;
+
+            @include tablet
+            {
+            flex-direction: row;
+            }
+
     }
 
     address
