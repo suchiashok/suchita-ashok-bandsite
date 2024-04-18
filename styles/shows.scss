@@ -1,4 +1,151 @@
-html, body
-{
+@use 'partials/variables' as *;
+@use 'partials/mixins' as *;
+@use 'partials/typography' as *;
+
+html, body {
     @include fit;
+    font-family: $font-global;
+}
+
+.navbar {
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    background-color: $header-footer-background;
+    list-style-type: none;
+
+        @include tablet {
+            display: flex;
+            flex-direction: row;
+            gap: 5rem;
+            padding: 1.3rem;
+            padding-top: 0.8rem;
+            padding-left: 3rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: $header-footer-text;
+        }
+
+        &__title {
+            display: flex;
+            justify-content: center;
+            padding-top: 1rem;
+            padding-bottom: 0;
+                img {
+                    height: auto;
+                    margin-top: 0.5rem;
+
+                    @include tablet {
+                        margin-top: 1rem;
+                    }
+
+                    @include desktop {
+                        margin-top: 1.1rem;
+                    }
+                }
+
+                @include desktop {
+                    padding-left: 4.2rem;
+                }
+        }
+        
+        &__optionsList {
+        display: flex;
+        flex-grow: 1;
+        list-style: none;
+         @include fit;
+        padding-top: 0.7rem;
+        margin-bottom: 0.7rem;
+
+         
+            @include tablet {
+                display: flex;
+                gap: 2rem;
+                font-size: 1rem; 
+                padding-top: 1.9rem;
+            }
+
+            @include desktop {
+                font-size: 0.9rem;
+            }
+        }
+
+        &__options-option1, &__options-option2 {
+        list-style-type: none;
+        display: flex;
+        flex-grow: 1;
+        justify-content: center;
+
+            &:hover {
+             border-bottom: 1px white;
+            }
+        }
+}
+.hero {
+    background-image: url(/assets/Images/hero-shows.jpg);
+    background-size: cover;
+    
+        @include tablet {
+            height: calc(20vw + 370px);
+        }
+
+        @include desktop {
+            height: calc(45vw - 25px);
+        }
+
+        &__bg {
+            background-color: rgba($header-footer-background, 0.5);
+            display: flex;
+            flex-direction: column;
+            height: 15rem;
+            align-items: flex-start;
+            
+                @include tablet {
+                    height: calc(20vw + 370px);
+                }
+
+                @include desktop {
+                    height: calc(45vw - 25px);
+                }
+        }
+        &__title1 {
+            @include fit;
+            
+            font-weight: 400;
+            padding-left: 1rem;
+            font-size: 1rem;
+            position: relative;
+            color: $body-text;        
+        
+                @include tablet {
+                    font-size: 4.2rem;
+                    padding: 1.9rem;
+                }
+
+                @include desktop {
+                    font-size: 3.5rem;
+                    padding-left: 6.5rem;
+                }
+        }
+        &__title2 {
+            @include fit;
+            font-weight: 600;
+            padding-left: 1rem;
+            font-size: 1.8rem;
+            position: relative;
+            color: $body-text;        
+        
+                @include tablet {
+                    font-size: 4.2rem;
+                    padding: 1.9rem;
+                }
+
+                @include desktop {
+                    font-size: 3.5rem;
+                    padding-left: 6.5rem;
+                }
+        }
+       
 }

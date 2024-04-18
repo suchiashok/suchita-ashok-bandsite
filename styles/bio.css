@@ -16,10 +16,10 @@
 html, body {
   margin: 0;
   padding: 0;
+  font-family: "Avenir";
 }
 
 .navbar {
-  font-family: "Avenir";
   font-weight: 400;
   display: flex;
   flex-direction: column;
@@ -57,7 +57,7 @@ html, body {
 }
 @media screen and (min-width: 1280px) {
   .navbar__title img {
-    marrgin-top: 1.1rem;
+    margin-top: 1.1rem;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -65,21 +65,17 @@ html, body {
     padding-left: 4.2rem;
   }
 }
-.navbar__options--list {
+.navbar__optionsList {
   display: flex;
-  align-items: center;
-  justify-content: space-around;
+  flex-grow: 1;
   list-style: none;
   margin: 0;
   padding: 0;
   padding-top: 0.7rem;
-  padding-bottom: 0.7rem;
-}
-.navbar__options--list a {
-  display: block;
+  margin-bottom: 0.7rem;
 }
 @media screen and (min-width: 768px) {
-  .navbar__options--list {
+  .navbar__optionsList {
     display: flex;
     gap: 2rem;
     font-size: 1rem;
@@ -87,18 +83,18 @@ html, body {
   }
 }
 @media screen and (min-width: 1280px) {
-  .navbar__options--list {
+  .navbar__optionsList {
     font-size: 0.9rem;
   }
 }
-.navbar__options--option1, .navbar__options--option2 {
+.navbar__options-option1, .navbar__options-option2 {
   list-style-type: none;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  flex-grow: 1;
+  justify-content: center;
 }
-.navbar__options--option1:hover, .navbar__options--option2:hover {
-  transform: scale(1.09);
+.navbar__options-option1:hover, .navbar__options-option2:hover {
+  border-bottom: 1px white;
 }
 
 .hero {
@@ -194,47 +190,47 @@ html, body {
     padding-right: 3.5rem;
   }
 }
-.about__part1--image {
+.about__image {
   height: auto;
   width: 100%;
 }
 @media screen and (min-width: 1280px) {
-  .about__part1--image {
+  .about__image {
     height: calc(60vh - 220px);
     width: calc(72vw - 100px);
   }
 }
-.about__part1--quote {
+.about__quote {
   font-family: "Avenir";
   font-weight: 600;
   font-size: 1.12rem;
   line-height: 1.9rem;
 }
 @media screen and (min-width: 768px) {
-  .about__part1--quote {
+  .about__quote {
     font-size: 1.65rem;
     line-height: 2.4rem;
   }
 }
 @media screen and (min-width: 1280px) {
-  .about__part1--quote {
+  .about__quote {
     font-size: 1.2rem;
     line-height: 1.8rem;
     margin-right: 9rem;
   }
 }
-.about__part1--quoteby {
+.about__quoteby {
   font-family: "Avenir";
   font-weight: 600;
   font-size: 1.1rem;
 }
 @media screen and (min-width: 768px) {
-  .about__part1--quoteby {
+  .about__quoteby {
     font-size: 1.2rem;
   }
 }
 @media screen and (min-width: 1280px) {
-  .about__part1--quoteby {
+  .about__quoteby {
     font-size: 0.8rem;
   }
 }
@@ -245,13 +241,13 @@ html, body {
     padding-top: 1.8rem;
   }
 }
-.about__part2--title2 {
+.about__title2 {
   font-family: "Avenir";
   font-weight: 400;
   font-style: bold;
 }
 @media screen and (min-width: 768px) {
-  .about__part2--title2 {
+  .about__title2 {
     margin: 0;
     padding: 0;
     font-weight: 600;
@@ -259,19 +255,19 @@ html, body {
   }
 }
 @media screen and (min-width: 1280px) {
-  .about__part2--title2 {
+  .about__title2 {
     font-weight: 400;
     font-size: 1.4rem;
   }
 }
-.about__part2--para {
+.about__para {
   font-family: "Avenir";
   font-weight: 400;
   line-height: 1.4rem;
   font-size: 1.05rem;
 }
 @media screen and (min-width: 768px) {
-  .about__part2--para {
+  .about__para {
     display: flex;
     gap: 2rem;
     font-size: 1.12rem;
@@ -281,7 +277,7 @@ html, body {
   }
 }
 @media screen and (min-width: 1280px) {
-  .about__part2--para {
+  .about__para {
     font-size: 0.9rem;
     line-height: 1.4rem;
   }
@@ -358,6 +354,42 @@ html, body {
   }
 }
 
+.comment {
+  padding-left: 1.4rem;
+  padding-bottom: 1rem;
+}
+.comment__form {
+  padding-left: 4.5rem;
+  padding-right: 3rem;
+}
+.comment__title {
+  font-weight: 600;
+  font-size: 1.85rem;
+}
+.comment__label {
+  color: #AFAFAF;
+  font-weight: 400;
+  font-size: 0.9rem;
+  padding-bottom: 0.25rem;
+}
+.comment__input1, .comment__input2 {
+  font-size: 1.1rem;
+  height: 2rem;
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1.2rem;
+  border-color: #AFAFAF;
+  border-radius: 0.3rem;
+}
+.comment__input2 {
+  height: 6rem;
+}
+.comment__button {
+  height: 3rem;
+  width: 100%;
+  border-radius: 0.3rem;
+}
+
 .footer {
   margin: 0;
   padding: 0;
@@ -403,7 +435,7 @@ html, body {
 @media screen and (min-width: 768px) {
   .footer__head--title {
     font-family: "Avenir";
-    fonr-weight: 700;
+    font-weight: 700;
     font-size: 2.5rem;
   }
 }

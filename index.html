@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bandsite Biography</title>
+    <title>Bandsite-Biography</title>
     <link href="./styles/bio.css" rel="stylesheet">
 </head>
 <body>
@@ -13,9 +13,9 @@
                 <a href="index.html"><img src="./assets/Logo/Logo-bandsite.svg"></a>
             </div>
             <div class="navbar__options">
-                <div class="navbar__options--list">
-                    <a class="navbar__options--option1" href="index.html">Biography</a>
-                    <a class="navbar__options--option2" href="">Shows</a>
+                <div class="navbar__optionsList">
+                    <a class="navbar__options-option1" href="index.html"><span class="navbar__options-option1">Biography</span></a>
+                    <a class="navbar__options-option2" href="pages/shows.html"><span class="navbar__options-option2">Shows</span></a>
                 </div>
             </div>
         </nav>
@@ -29,15 +29,15 @@
         <section class="about">
             <h2 class="about__title">About the Musicians</h2>
             <div class="about__part1">
-                <img class="about__part1--image" src= "./assets/Images/band.jpg">
-                <p class="about__part1--quote">“We push each other to be the best. It’s not uncommon for one of us to say ‘this needs to be better, back to the drawing board’”</p>
-                <p class="about__part1--quoteby">- Lead vocalist of The Bees Knees</p>
+                <img class="about__image" src= "./assets/Images/band.jpg">
+                <p class="about__quote">“We push each other to be the best. It’s not uncommon for one of us to say ‘this needs to be better, back to the drawing board’”</p>
+                <p class="about__quoteby">- Lead vocalist of The Bees Knees</p>
             </div>
             <div class="about__part2">
-                <h3 class="about__part2--title2">The Bees Knees</h3>
-                <div class="about__part2--para">
-                <p class="about__part2--para1">The Bees Knees is a pop rock band originating from San Francisco, California. The band consists a dynamic lineup featuring two lead vocalists, two guitarists, a bassist, a keyboardist and a drummer. The band achieved its first commercial success as an unsigned act, drawing attention from their future manager. Having extensive experience working with both new and seasoned acts, the manager was confident the band could succeed even further with more support, pushing The Bees Knees to sign with a well known record label.</p>
-                <p class="about__part2--para2">From there, the band has soared, gaining international recognition and ranking in the top 10 on the Poster Charts. New fans immediately fell in love with the band’s original and organic attitude, solidifying their place as one of the hottest and fastest up and coming acts of this century. Fans affectionately refer to themselves as “The Hive” and are drawn to their candid and authentic performances on stage. The Bees Knees are currently recording their second studio album, looking to be released in early 2024.</p>
+                <h3 class="about__title2">The Bees Knees</h3>
+                <div class="about__para">
+                <p class="about__para1">The Bees Knees is a pop rock band originating from San Francisco, California. The band consists a dynamic lineup featuring two lead vocalists, two guitarists, a bassist, a keyboardist and a drummer. The band achieved its first commercial success as an unsigned act, drawing attention from their future manager. Having extensive experience working with both new and seasoned acts, the manager was confident the band could succeed even further with more support, pushing The Bees Knees to sign with a well known record label.</p>
+                <p class="about__para2">From there, the band has soared, gaining international recognition and ranking in the top 10 on the Poster Charts. New fans immediately fell in love with the band’s original and organic attitude, solidifying their place as one of the hottest and fastest up and coming acts of this century. Fans affectionately refer to themselves as “The Hive” and are drawn to their candid and authentic performances on stage. The Bees Knees are currently recording their second studio album, looking to be released in early 2024.</p>
                 </div>
             </div>
         </section>
@@ -72,6 +72,28 @@
                     <img src="assets/Images/Photo-gallery-9.jpg">
                 </figure>
             </div>
+        </section>
+        <section class="comment">
+            <h2 class="comment__title">Join the Conversation</h2>
+            <form class="comment__form">
+                <label class="comment__label" for="name">NAME</label>
+                <input class="comment__input1"
+                    type="text"
+                    name="name"
+                    id="nameInput"
+                    placeholder="Enter your name"
+                    required />
+                <label class="comment__label for="comment">COMMENT</label>
+                <input class="comment__input2"
+                    type="text"
+                    name="comment"
+                    id="commentInput"
+                    placeholder="Add a new comment"
+                    required />
+                <button class="comment__button">
+                    COMMENT
+                </button>
+            </form>
         </section>
     </main>
     <footer>
