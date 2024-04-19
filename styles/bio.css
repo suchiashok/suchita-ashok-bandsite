@@ -404,13 +404,13 @@ html, body {
     padding: 2rem 0.5rem 1.2rem 5.5rem;
   }
 }
-.footer__socialcontent {
+.footer__socialContent {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
 }
 @media screen and (min-width: 768px) {
-  .footer__socialcontent {
+  .footer__socialContent {
     flex-direction: row;
   }
 }
