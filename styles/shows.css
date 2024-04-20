@@ -169,4 +169,43 @@ html, body {
     font-size: 3.5rem;
     padding-left: 6.5rem;
   }
+}
+
+.shows__title {
+  font-weight: 600;
+  padding-left: 1rem;
+  font-size: 1.5rem;
+}
+.shows__eachShow {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.shows__date, .shows__venue, .shows__location {
+  padding-bottom: 1rem;
+}
+.shows__date-label, .shows__venue-label, .shows__location-label {
+  font-weight: 600;
+  color: #AFAFAF;
+  font-size: 0.8rem;
+  margin: 0;
+  padding: 0;
+}
+.shows__date-info, .shows__venue-info, .shows__location-info {
+  font-weight: 400;
+  font-size: 1rem;
+  margin: 0;
+  padding: 0;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+.shows__date-info {
+  font-weight: 600;
+}
+.shows__button {
+  height: 2.5rem;
+  width: 100%;
+  padding: 0;
+  background-color: #000000;
+  color: white;
+  border-radius: 0.3rem;
 }/*# sourceMappingURL=shows.css.map */

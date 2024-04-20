@@ -54,9 +54,7 @@ const newComment = {
 };
 
 commentArray.push(newComment);
-
 renderNewComments();
-
 document.getElementById("nameInput").value = "";
 document.getElementById("commentInput").value = "";
 

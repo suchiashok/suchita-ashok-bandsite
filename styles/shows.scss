@@ -149,3 +149,50 @@ html, body {
         }
        
 }
+.shows {
+    
+    &__title {
+        font-weight: 600;
+        padding-left: 1rem;
+        font-size: 1.5rem;
+    }
+        
+        
+    &__eachShow
+    {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    &__date, &__venue, &__location {
+        padding-bottom: 1rem;
+    }
+    &__date-label, &__venue-label, &__location-label
+    {
+        font-weight: 600;
+        color: #AFAFAF;
+        font-size: 0.8rem;
+        @include fit;
+    }
+    &__date-info, &__venue-info, &__location-info
+    {
+        font-weight: 400;
+        font-size: 1rem;
+        @include fit;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
+    &__date-info
+    {
+        font-weight: 600;
+    }
+    &__button
+    {
+        height: 2.5rem;
+        width: 100%;
+        padding: 0;
+        background-color: #000000;
+        color: white;
+        border-radius: 0.3rem;
+    }
+    
+}
