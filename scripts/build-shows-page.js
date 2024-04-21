@@ -2,7 +2,7 @@ const showsArray = [
     {
         date: {
             label: "DATE",
-            info: "MON Sept 09 2024"
+            info: "Mon Sept 09 2024"
         },
         venue: {
             label: "VENUE",
@@ -96,9 +96,32 @@ document.querySelector(".shows").appendChild(title);
 title.innerText = "Shows";
 showsSection.appendChild(title);
 
+//function to create the labels for the tablet/desktop view
+function createTabletLabels() {
+    const labelsContainer = createElementWithClass("div", "shows__labels");
+
+    const dateLabelTabEl = createElementWithClass("span", "shows__dateLabel-Tab");
+    dateLabelTabEl.innerText = "DATE";
+    labelsContainer.appendChild(dateLabelTabEl);
+
+    const venueLabelTabEl = createElementWithClass("span", "shows__venueLabel-Tab");
+    venueLabelTabEl.innerText = "VENUE";
+    labelsContainer.appendChild(venueLabelTabEl);
+
+    const locationLabelTabEl = createElementWithClass("span", "shows__locationLabel-Tab");
+    locationLabelTabEl.innerText = "LOCATION";
+    labelsContainer.appendChild(locationLabelTabEl);
+
+    return labelsContainer;
+}
+
+
 const showsAll = document.createElement("div");
 showsAll.classList.add("shows__all");
 showsSection.appendChild(showsAll);
+
+const labelsContainer = createTabletLabels();
+showsAll.appendChild(labelsContainer);
 
 showsArray.forEach(show => {
     const eachShowEl = createShowsContent(show);
@@ -114,6 +137,7 @@ function createElementWithClass(elementName, className) {
 
 function createShowsContent(showEl) {
     //div for each show
+    //appending date,venue,location to the parent child
     const eachShowEl = createElementWithClass("div","shows__eachShow")
 
     const dateEl = createShowDate(showEl.date)
@@ -125,12 +149,14 @@ function createShowsContent(showEl) {
     const locationEl = createShowLocation(showEl.location)
     eachShowEl.appendChild(locationEl);
 
+    const buttonEl = createShowButton();
+    eachShowEl.appendChild(buttonEl);
+
     return eachShowEl;
 
 }
 
-//function for Date
-  
+//function for Date  
 function createShowDate(date) {
 
     const dateEl = createElementWithClass("div","shows__date")
@@ -147,7 +173,6 @@ function createShowDate(date) {
 }
 
 //function for Venue
-
 function createShowVenue(venue) {
 
     const venueEl = createElementWithClass("div","shows__venue")
@@ -164,7 +189,6 @@ function createShowVenue(venue) {
 }
 
 //function for Location 
-
 function createShowLocation(location) {
 
     const locationEl = createElementWithClass("div","shows__location")
@@ -180,10 +204,14 @@ function createShowLocation(location) {
     return locationEl;
 }
 
+//function for 'buy tickets' button
+function createShowButton() {
+    const buttonEl = createElementWithClass("button", "shows__button")
+    buttonEl.innerText = "BUY TICKETS";
+    return buttonEl;
+}
 
 
-
-    
 
     
 

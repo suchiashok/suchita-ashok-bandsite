@@ -86,13 +86,16 @@ html, body {
 .hero {
     background-image: url(/assets/Images/hero-shows.jpg);
     background-size: cover;
+    height: 24rem;
     
         @include tablet {
             height: calc(20vw + 370px);
         }
 
         @include desktop {
-            height: calc(45vw - 25px);
+            height: calc(50vw - 20px);
+            background-position: center;
+            background-repeat: no-repeat;
         }
 
         &__bg {
@@ -107,64 +110,175 @@ html, body {
                 }
 
                 @include desktop {
-                    height: calc(45vw - 25px);
+                    height: calc(50vw - 20px);
+                    flex-direction: row;
+                    align-items: center;
                 }
+        }
+        &__soundCloudTrack
+        {
+            @include fit;
+            width: 93%;
+            margin-right: 1rem;
+            margin-left: 1rem;
+
+                @include tablet {
+                    width: 60%;
+                    margin-left: 3rem;
+                    iframe {
+                        height: 9.5rem;
+                    }
+                }
+                @include desktop {
+                    width: 35%;
+                    margin-right: 15rem;
+                    margin-left: 0;
+                    iframe {
+                        height: 8rem;
+                    }
+                }
+        }
+        &__title
+        {
+            @include desktop 
+            {
+                padding-left: 3rem;
+            }
         }
         &__title1 {
             @include fit;
-            
             font-weight: 400;
             padding-left: 1rem;
-            font-size: 1rem;
+            padding-top: 3rem;
+            padding-bottom: 1.5rem;
+            font-size: 1.2rem;
             position: relative;
             color: $body-text;        
         
                 @include tablet {
-                    font-size: 4.2rem;
-                    padding: 1.9rem;
+                    font-size: 2rem;
+                    padding-left: 3rem;
+                    padding-top: 4.5rem;
                 }
 
                 @include desktop {
-                    font-size: 3.5rem;
+                    font-size: 1.3rem;
                     padding-left: 6.5rem;
+                    padding-bottom: 0;
+                    padding-top: 2rem;
                 }
         }
         &__title2 {
             @include fit;
             font-weight: 600;
             padding-left: 1rem;
-            font-size: 1.8rem;
+            padding-bottom: 2rem;
+            font-size: 2rem;
+            width: 65%;
             position: relative;
             color: $body-text;        
         
                 @include tablet {
-                    font-size: 4.2rem;
-                    padding: 1.9rem;
+                    font-size: 4rem;
+                    padding-left: 3rem;
                 }
 
                 @include desktop {
-                    font-size: 3.5rem;
+                    font-size: 3rem;
                     padding-left: 6.5rem;
                 }
         }
        
 }
 .shows {
+
+    @include desktop {
+        display: flex;
+        
+    }
     
     &__title {
         font-weight: 600;
-        padding-left: 1rem;
-        font-size: 1.5rem;
+        padding-left: 1.4rem;
+        padding-top: 1rem;
+        font-size: 2rem;
+
+            @include tablet {
+                padding-left: 3.8rem;
+                font-size: 2.5rem;
+                padding-top: 1rem;
+                padding-bottom: 1rem;
+            }
+            @include desktop {
+                padding-left: 8rem;
+            }
+    }  
+    &__labels
+    {
+        display: none;
+
+        @include tablet {
+            display: flex;
+            width: 65%;
+            font-weight: 600;
+            color: #AFAFAF;
+            font-size: 0.9rem;
+            justify-content: space-around;
+        }
+
+        @include desktop {
+            display: flex;
+            width: 62%;
+        }
     }
-        
-        
+    &__dateLabel-Tab
+    {
+        @include tablet {
+            padding-left: 1rem;
+        }
+    }
+    &__venueLabel-Tab
+    {
+        @include tablet {
+            padding-left: 3rem;
+        }
+    }
+    &__all {
+        @include tablet {
+            margin-right: 0.7rem;
+            margin-left: 0.7rem;
+            margin-bottom: 2rem;
+        }
+        @include desktop {
+            flex-grow: 1;
+            margin-top: 4.5rem;
+            margin-bottom: 1rem;
+            margin-right: 4rem;
+            margin-left: 4rem;
+            
+        }
+    }
     &__eachShow
     {
-        padding-left: 1rem;
-        padding-right: 1rem;
+        padding: 1.2rem;
+        padding-left: 1.4rem;
+        border-bottom: .15rem solid #E1E1E1;
+        margin-bottom: 0.5rem;
+
+        @include tablet {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 0.3rem;
+        }
     }
     &__date, &__venue, &__location {
         padding-bottom: 1rem;
+        display: flex;
+        flex-direction: column;
+
+            @include tablet {
+                flex-direction: row;
+            }
     }
     &__date-label, &__venue-label, &__location-label
     {
@@ -172,6 +286,11 @@ html, body {
         color: #AFAFAF;
         font-size: 0.8rem;
         @include fit;
+
+            @include tablet
+            {
+                display: none;
+            }
     }
     &__date-info, &__venue-info, &__location-info
     {
@@ -180,6 +299,7 @@ html, body {
         @include fit;
         padding-top: 0.5rem;
         padding-bottom: 0.5rem;
+
     }
     &__date-info
     {
@@ -187,12 +307,24 @@ html, body {
     }
     &__button
     {
-        height: 2.5rem;
+        height: 3.5rem;
+        font-weight: 400;
+        font-size: 1.2rem;
         width: 100%;
         padding: 0;
-        background-color: #000000;
+        background-color: #323232;
         color: white;
         border-radius: 0.3rem;
+        border: none;
+
+            @include tablet {
+                width: 23%;
+                height: 3.3rem;
+                font-size: 1rem;
+            }
+
+            @include desktop {
+                width: 20%;
+            }
     }
-    
 }

@@ -100,6 +100,7 @@ html, body {
 .hero {
   background-image: url(/assets/Images/hero-shows.jpg);
   background-size: cover;
+  height: 24rem;
 }
 @media screen and (min-width: 768px) {
   .hero {
@@ -108,7 +109,9 @@ html, body {
 }
 @media screen and (min-width: 1280px) {
   .hero {
-    height: calc(45vw - 25px);
+    height: calc(50vw - 20px);
+    background-position: center;
+    background-repeat: no-repeat;
   }
 }
 .hero__bg {
@@ -125,7 +128,40 @@ html, body {
 }
 @media screen and (min-width: 1280px) {
   .hero__bg {
-    height: calc(45vw - 25px);
+    height: calc(50vw - 20px);
+    flex-direction: row;
+    align-items: center;
+  }
+}
+.hero__soundCloudTrack {
+  margin: 0;
+  padding: 0;
+  width: 93%;
+  margin-right: 1rem;
+  margin-left: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .hero__soundCloudTrack {
+    width: 60%;
+    margin-left: 3rem;
+  }
+  .hero__soundCloudTrack iframe {
+    height: 9.5rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero__soundCloudTrack {
+    width: 35%;
+    margin-right: 15rem;
+    margin-left: 0;
+  }
+  .hero__soundCloudTrack iframe {
+    height: 8rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero__title {
+    padding-left: 3rem;
   }
 }
 .hero__title1 {
@@ -133,20 +169,25 @@ html, body {
   padding: 0;
   font-weight: 400;
   padding-left: 1rem;
-  font-size: 1rem;
+  padding-top: 3rem;
+  padding-bottom: 1.5rem;
+  font-size: 1.2rem;
   position: relative;
   color: white;
 }
 @media screen and (min-width: 768px) {
   .hero__title1 {
-    font-size: 4.2rem;
-    padding: 1.9rem;
+    font-size: 2rem;
+    padding-left: 3rem;
+    padding-top: 4.5rem;
   }
 }
 @media screen and (min-width: 1280px) {
   .hero__title1 {
-    font-size: 3.5rem;
+    font-size: 1.3rem;
     padding-left: 6.5rem;
+    padding-bottom: 0;
+    padding-top: 2rem;
   }
 }
 .hero__title2 {
@@ -154,34 +195,116 @@ html, body {
   padding: 0;
   font-weight: 600;
   padding-left: 1rem;
-  font-size: 1.8rem;
+  padding-bottom: 2rem;
+  font-size: 2rem;
+  width: 65%;
   position: relative;
   color: white;
 }
 @media screen and (min-width: 768px) {
   .hero__title2 {
-    font-size: 4.2rem;
-    padding: 1.9rem;
+    font-size: 4rem;
+    padding-left: 3rem;
   }
 }
 @media screen and (min-width: 1280px) {
   .hero__title2 {
-    font-size: 3.5rem;
+    font-size: 3rem;
     padding-left: 6.5rem;
   }
 }
 
+@media screen and (min-width: 1280px) {
+  .shows {
+    display: flex;
+  }
+}
 .shows__title {
   font-weight: 600;
-  padding-left: 1rem;
-  font-size: 1.5rem;
+  padding-left: 1.4rem;
+  padding-top: 1rem;
+  font-size: 2rem;
+}
+@media screen and (min-width: 768px) {
+  .shows__title {
+    padding-left: 3.8rem;
+    font-size: 2.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .shows__title {
+    padding-left: 8rem;
+  }
+}
+.shows__labels {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .shows__labels {
+    display: flex;
+    width: 65%;
+    font-weight: 600;
+    color: #AFAFAF;
+    font-size: 0.9rem;
+    justify-content: space-around;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .shows__labels {
+    display: flex;
+    width: 62%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .shows__dateLabel-Tab {
+    padding-left: 1rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .shows__venueLabel-Tab {
+    padding-left: 3rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .shows__all {
+    margin-right: 0.7rem;
+    margin-left: 0.7rem;
+    margin-bottom: 2rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .shows__all {
+    flex-grow: 1;
+    margin-top: 4.5rem;
+    margin-bottom: 1rem;
+    margin-right: 4rem;
+    margin-left: 4rem;
+  }
 }
 .shows__eachShow {
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding: 1.2rem;
+  padding-left: 1.4rem;
+  border-bottom: 0.15rem solid #E1E1E1;
+  margin-bottom: 0.5rem;
+}
+@media screen and (min-width: 768px) {
+  .shows__eachShow {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 0.3rem;
+  }
 }
 .shows__date, .shows__venue, .shows__location {
   padding-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .shows__date, .shows__venue, .shows__location {
+    flex-direction: row;
+  }
 }
 .shows__date-label, .shows__venue-label, .shows__location-label {
   font-weight: 600;
@@ -189,6 +312,11 @@ html, body {
   font-size: 0.8rem;
   margin: 0;
   padding: 0;
+}
+@media screen and (min-width: 768px) {
+  .shows__date-label, .shows__venue-label, .shows__location-label {
+    display: none;
+  }
 }
 .shows__date-info, .shows__venue-info, .shows__location-info {
   font-weight: 400;
@@ -202,10 +330,25 @@ html, body {
   font-weight: 600;
 }
 .shows__button {
-  height: 2.5rem;
+  height: 3.5rem;
+  font-weight: 400;
+  font-size: 1.2rem;
   width: 100%;
   padding: 0;
-  background-color: #000000;
+  background-color: #323232;
   color: white;
   border-radius: 0.3rem;
+  border: none;
+}
+@media screen and (min-width: 768px) {
+  .shows__button {
+    width: 23%;
+    height: 3.3rem;
+    font-size: 1rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .shows__button {
+    width: 20%;
+  }
 }/*# sourceMappingURL=shows.css.map */
