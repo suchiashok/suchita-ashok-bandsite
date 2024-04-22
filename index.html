@@ -75,25 +75,30 @@
         </section>
         <section class="comment">
             <h2 class="comment__title">Join the Conversation</h2>
-            <form class="comment__form">
-                <label class="comment__label" for="name">NAME</label>
-                <input class="comment__input1"
-                    type="text"
-                    name="name"
-                    id="nameInput"
-                    placeholder="Enter your name"
-                    required />
-                <label class="comment__label for="comment">COMMENT</label>
-                <input class="comment__input2"
-                    type="text"
-                    name="comment"
-                    id="commentInput"
-                    placeholder="Add a new comment"
-                    required />
-                <button class="comment__button">
-                    COMMENT
-                </button>
-            </form>     
+            <div class="comment__form">
+            <img class="comment__profileIcon" src="assets/Images/Mohan-muruge.jpg" alt="convo-profilePic">
+                <form class="comment__formInputSection">
+                    <label class="comment__label" for="name">NAME</label>
+                    <input class="comment__input1"
+                        type="text"
+                        name="name"
+                        id="nameInput"
+                        placeholder="Enter your name"
+                        required />
+                    <label class="comment__label" id="date" for="comment">COMMENT</label>
+                    <input class="comment__input2"
+                        type="text"
+                        name="comment"
+                        id="commentInput"
+                        placeholder="Add a new comment"
+                        required />
+                    <div class="comment__buttonEl">
+                        <button class="comment__button">
+                            COMMENT
+                        </button>
+                    </div>
+                </form> 
+            </div>    
         </section>
     </main>
     <footer>
@@ -103,9 +108,9 @@
                     <h2 class="footer__head--title">Get in Touch</h2>
                 </div>
                 <div class="footer__media">
-                    <a href="https://www.instagram.com/"><img class="footer__media--insta" src="assets/Icons/SVG/Icon-instagram.svg"></a>
-                    <a href="https://www.facebook.com/"><img class="footer__media--facebook" src="assets/Icons/SVG/Icon-facebook.svg"></a>
-                    <a href="https://www.twitter.com/"><img class="footer__media--twitter" src="assets/Icons/SVG/Icon-twitter.svg"></a>
+                    <a href="https://www.instagram.com/"><img class="footer__media--insta" src="assets/Icons/SVG/Icon-instagram.svg" alt="instagram-logo"></a>
+                    <a href="https://www.facebook.com/"><img class="footer__media--facebook" src="assets/Icons/SVG/Icon-facebook.svg" alt="facebook-logo"></a>
+                    <a href="https://www.twitter.com/"><img class="footer__media--twitter" src="assets/Icons/SVG/Icon-twitter.svg" alt="twitter-logo"></a>
                 </div>
             </div>
             <div class="footer__contactbox">
@@ -126,7 +131,7 @@
                 </div>
             </div>
             <div class="footer__media">
-                <img class="footer__media--bandsitelogo" src="./assets/Logo/Logo-bandsite.svg">
+                <img class="footer__media--bandsitelogo" src="./assets/Logo/Logo-bandsite.svg" alt="bandsite-logo">
             </div>
             <div class="footer__copyright">
                 <p class="footer__copyright--info">Copyright The Bees Knees © 2023 All Rights Reserved</p>

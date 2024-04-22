@@ -1,0 +1,7 @@
+@use 'mixins' as *;
+@use 'variables' as *;
+
+html, body {
+    @include fit;
+    font-family: $font-global;
+}

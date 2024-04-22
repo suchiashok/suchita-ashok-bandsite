@@ -1,11 +1,7 @@
 @use 'partials/variables' as *;
 @use 'partials/mixins' as *;
 @use 'partials/typography' as *;
-
-html, body {
-    @include fit;
-    font-family: $font-global;
-}
+@use 'partials/global' as *;
 
 .navbar {
     font-weight: 400;
@@ -265,6 +261,15 @@ html, body {
         border-bottom: .15rem solid #E1E1E1;
         margin-bottom: 0.5rem;
 
+            &:hover {
+                background-color: #FAFAFA;
+            }
+
+            &:active, &:focus { 
+                background-color: #E1E1E1; 
+                outline: none;
+            }
+
         @include tablet {
             display: flex;
             justify-content: space-around;
@@ -317,6 +322,10 @@ html, body {
         border-radius: 0.3rem;
         border: none;
 
+        &:hover {
+            background-color: black;
+        }
+
             @include tablet {
                 width: 23%;
                 height: 3.3rem;
@@ -326,5 +335,174 @@ html, body {
             @include desktop {
                 width: 20%;
             }
+    }
+}
+.footer
+{
+    @include fit;
+    position: relative;
+    background-color: $header-footer-background;
+    color: $header-footer-text;
+    font-family: "Avenir";
+    padding: 1.2rem 0.5rem 1.2rem 0.6rem;
+
+        @include desktop {
+            padding: 2rem 0.5rem 1.2rem 5.5rem;
+        }
+
+    &__socialContent
+    {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+
+            @include tablet {
+            flex-direction: row;
+            }
+
+    }
+
+    address {
+        font-style: normal; /* Resetting the default (italic) style */
+    }
+   
+    &__head {
+        padding-top: 1.5rem;
+        padding-bottom: 0.5rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+
+            &--title {
+            font-family: "Avenir";
+            font-weight: 600;
+            font-style: normal;
+            @include margin-reset;
+            font-size: 2rem;
+            color: $header-footer-text;
+
+                @include tablet {
+                    font-family: "Avenir";
+                    font-weight: 600;
+                    font-size: 2.5rem;
+                }
+
+                @include desktop {
+                    font-weight: 400;
+                    font-size: 2rem;
+                }
+            }
+    }
+
+    &__media
+    {
+        display: flex;
+        align-content: flex-start;
+
+
+            @include tablet {
+                display: flex;
+                align-content: flex-start;
+            }
+            
+            @include desktop {
+                padding-left: 1.2rem;
+            }
+    
+        &--insta, &--facebook, &--twitter {
+            height: 2rem;
+            width: 2rem;
+            padding: 1.2rem;
+
+            &:hover {
+            transform: scale(1.1);
+            }
+
+                @include tablet {
+                    height: 1.6rem;
+                    width: 1.6rem;
+                    padding-top: 2.5rem;
+                }
+
+                @include desktop {
+                    height: 1.3rem;
+                    width: 1.3rem;
+                    padding-top: 2.1rem;
+                }
+        }
+        &--bandsitelogo {
+            height: 1.6rem;
+            padding: 1.2rem;
+
+                @include tablet {
+                   position: absolute;
+                   height: 1.2rem;
+                   top: 2.7rem;
+                   right: 2rem; 
+                }
+
+                @include desktop {
+                    height: 1rem;
+                    right: 5.5rem;
+                }
+        }
+    }
+    &__contactbox
+    {
+            @include tablet {
+                display: flex;
+                flex-wrap: wrap;
+                padding-top: 1rem;
+                padding-bottom: 1rem; 
+            }
+
+            @include desktop {
+                gap: 1.75rem;
+            }
+        &--reachout1, &--reachout2, &--reachout3 {
+            font-family: "Avenir";
+            font-weight: 400;
+            font-size: 1rem;
+            padding: 0.5rem;
+            line-height: 1.3rem;
+
+                @include tablet {
+                    font-size: 0.95rem;
+                    line-height: 1.5rem;
+                }
+
+                @include desktop {
+                    font-size: 0.8rem;
+                    line-height: 1.25rem;
+                }
+        }
+        &--reachout1-title, &--reachout1-info, &--reachout1-email,
+        &--reachout2-title, &--reachout2-info, &--reachout2-email,
+        &--reachout3-title, &--reachout3-info, &--reachout3-email {
+            @include margin-reset;
+             padding: 0.5rem;
+        } 
+    }
+    &__copyright {
+        &--info {
+            @include margin-reset;
+            font-family: "Avenir";
+            font-weight: 400;
+            font-size: 0.9rem;
+            padding-top: 0.5rem;
+            padding-bottom: 1rem;
+            padding-left: 1rem;
+
+                @include tablet {
+                font-size: 0.95rem;
+                padding-top: 1.3rem;
+                padding-bottom: 1.3rem;
+                }
+
+                @include desktop {
+                    font-size: 0.8rem;
+                    padding-top: 1.5rem;
+                    padding-bottom: 1.5rem;
+                }
+        }
     }
 }

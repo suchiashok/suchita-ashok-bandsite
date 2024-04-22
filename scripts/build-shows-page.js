@@ -210,10 +210,3 @@ function createShowButton() {
     buttonEl.innerText = "BUY TICKETS";
     return buttonEl;
 }
-
-
-
-    
-
-    
-

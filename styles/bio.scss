@@ -1,12 +1,8 @@
 @use 'partials/variables' as *;
 @use 'partials/mixins' as *;
 @use 'partials/typography' as *;
+@use 'partials/global' as *;
 
-
-html, body {
-    @include fit;
-    font-family: $font-global;
-}
 
 .navbar
 {
@@ -191,99 +187,82 @@ html, body {
         }
     }
 
-    &__part1
-    {
-        @include tablet
-        {
+    &__part1 {
+        @include tablet {
             padding-left: 3.5rem;
             padding-right: 3.5rem; 
         }
     }
-    &__image
-    {
+    &__image {
         height: auto;
         width: 100%;  
             
-            @include desktop
-            {
+            @include desktop {
                 height: calc(60vh - 220px);
                 width: calc(72vw - 100px);
             }
     }
-    &__quote
-    {
+    &__quote {
     font-family: "Avenir";
     font-weight: 600;
     font-size: 1.12rem;
     line-height: 1.9rem;
 
-            @include tablet
-            {
+            @include tablet {
                 font-size: 1.65rem;
                 line-height: 2.4rem;
             }
 
-            @include desktop
-            {
+            @include desktop {
                 font-size: 1.2rem;
                 line-height: 1.8rem;
                 margin-right: 9rem;
             }
     }
-    &__quoteby
-    {
+    &__quoteby {
         font-family: "Avenir";
         font-weight: 600;
         font-size: 1.1rem;
 
-            @include tablet
-            {
+            @include tablet {
                 font-size: 1.2rem
             }
-            @include desktop
-            {
+            @include desktop {
                 font-size: 0.8rem;
             }
     
     }
 
-    &__part2
-    {
-        @include tablet
-        {
+    &__part2 {
+        @include tablet {
             padding-left: 3.5rem;
             padding-right: 3.5rem; 
             padding-top: 1.8rem;
         }
     }
-    &__title2
-    {
+    &__title2 {
         font-family: "Avenir";
         font-weight: 400;
         font-style: bold;
 
-            @include tablet
-            {   
+            @include tablet {   
                 @include fit;
                 font-weight: 600;
                 font-size: 1.9rem;
             }
-            @include desktop
-            {
+            @include desktop {
                 font-weight: 400;
                 font-size: 1.4rem;
             }
     }
 
-    &__para
-    {
+    &__para {
         font-family: "Avenir";
         font-weight: 400;
         line-height: 1.4rem;
         font-size: 1.05rem;
 
-            @include tablet
-            {
+            @include tablet {
                 display: flex;
                 gap: 2rem;
                 font-size: 1.12rem;
@@ -291,83 +270,69 @@ html, body {
                 padding-top: 1.2rem;
                 padding-bottom: 1.2rem;
             }
-            @include desktop
-            {
+            @include desktop {
                 font-size: 0.9rem;
                 line-height: 1.4rem;
             }
     }
 } 
 
-.gallery
-{
+.gallery {
     
     background-color: #FAFAFA;
     padding-top: 1.4rem;
 
-    @include tablet 
-    {
+    @include tablet {
         padding: 1.3rem;
     }
-    @include desktop
-    {
+    @include desktop {
         padding-left: 5.7rem;
         padding-right: 5.7rem;
     }
-        &__title
-        {
+        &__title {
             @include margin-reset;
             font-family: "Avenir";
             font-size: 1.85rem;
             font-weight: 600;
             padding-left: 1rem;
 
-                @include tablet
-                {
+                @include tablet {
                     font-size: 2.6rem;
                     font-weight: 600;
                     padding: 1.8rem;
                 }
-                @include desktop
-                {
+                @include desktop {
                     font-size: 2.1rem;
                 }
         }
-        &__photos
-        {   
+        &__photos {   
             padding-right: 0.6rem;
             padding-left: 0.6rem;
 
-            @include tablet
-            {
+            @include tablet {
                 display: flex;
                 justify-content: space-evenly;
                 flex-direction: row;
                 flex-wrap: wrap;
             }
-            &--item
-            {
+            &--item {
                 @include fit;
                 padding: 0.5rem 0.3rem;
 
-                @include tablet
-                {
+                @include tablet {
                     width: calc(33.33% - 2rem);
                 }
 
-                img 
-                {
+                img {
                     height: auto;
                     width: 100%;
                     filter: grayscale(100%);
                     
-                    &:hover
-                    {
+                    &:hover {
                         filter: grayscale(0%);
                     }
                         
-                        @include tablet
-                        {
+                        @include tablet {
                            height: auto;
                             
                         }
@@ -377,49 +342,209 @@ html, body {
 }
 .comment {
 
-    padding-left: 1.4rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
     padding-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
 
+        @include tablet {
+            padding-left: 5rem;
+            padding-right: 5.2rem;
+            justify-content: center;
+        }
+
+        @include desktop { 
+            padding-left: 13rem;
+            padding-right: 13rem;
+        }
 
     &__form {
-        padding-left: 4.5rem;
-        padding-right: 3rem;
+        padding-right: 1.5rem;
+        display: flex;
+        border-bottom: .15rem solid #E1E1E1;
+        padding-bottom: 2rem;
+        
+
+            @include tablet {
+                justify-content: center;
+            }
+
+            @include desktop {
+                margin-right: 10rem;
+                margin-left: 10rem;
+            }
     }
 
     &__title {
         font-weight: 600;
-        font-size: 1.85rem;
+        font-size: 2.1rem;
+
+            @include tablet { 
+                font-size: 3rem;
+            }
     }
 
+    &__profileIcon {
+        margin-top: 1.5rem;
+        margin-right: 1rem;
+        height: 55px;
+        width: 55px;
+        border-radius: 50%;
+            img {
+                width: 100%;
+                height: auto;
+                transform: scale(1.8);
+            }
+
+            
+    }
+    &__formInputSection {
+
+        @include tablet {
+            flex-grow: 1;
+        }
+    }
     &__label {
+        font-weight: 600;
         color: #AFAFAF;
-        font-weight: 400;
         font-size: 0.9rem;
-        padding-bottom: 0.25rem;
+        padding-bottom: 1rem;
     }
 
     &__input1, &__input2 {
+
         font-size: 1.1rem;
+        font-weight: 400;
         height: 2rem;
-        width: 100%;
+        width: 95%;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
         padding: 0.5rem;
         margin-bottom: 1.2rem;
-        border-color: #AFAFAF;
+        border: .125rem solid #E1E1E1;
+        background-color:#FAFAFA;
         border-radius: 0.3rem;
+
+            &::placeholder {
+                color: black;
+                position: absolute;
+                top: 0.9rem;
+                left: 0.8rem;   
+            }
+
+                @include tablet {
+                    width: 100%;
+                    font-size: 0.9rem;
+                }
     }
 
     &__input2 {
-        height: 6rem; 
-    }
+        height: 6rem; //setting different height for comment's input
+        }
 
-    &__button {
-        height: 3rem;
-        width: 100%;
-        
-        border-radius: 0.3rem;
+    &__buttonEl {
+
+        @include tablet {
+        display: flex;
+        justify-content: flex-end;
+        }
     }
-    
-  }
+    &__button {
+        height: 3.5rem;
+        border: none;
+        width: 100%;
+        font-weight: 400;
+        font-size: 1.4rem;
+        color: white;
+        background-color: #323232;
+        border-radius: 0.3rem;
+        padding: 0;
+
+            &:hover {
+                background-color: black;
+            }
+
+            @include tablet {
+                width: 35%;
+                height: 3.2rem;
+                font-size: 1.2rem;
+            }
+            @include desktop { 
+                width: 33%;
+                height: 2.5rem;
+                font-size: 1rem;
+            }
+    }
+    &__post {
+        display: flex;
+        flex-direction: column;
+
+            @include tablet { 
+                width: 100%;
+            }
+
+            @include desktop {
+               width: 72%;
+               margin-left: 10rem;
+               margin-right: 10rem;
+               
+            }
+    }
+    &__container {
+        display: flex;
+        flex-direction: row;
+        border-bottom: .15rem solid #E1E1E1;
+        margin-bottom: 0.5rem;
+    }
+    &__mainComment {
+        font-weight: 400;
+        height: auto;
+        width: 32.1006rem;
+        font-size: 1.2rem;
+        padding-right: 1.2rem;
+        flex-grow: 1;
+
+            @include tablet {
+                padding-left:0.5rem;
+                padding-right: 0.5rem;
+                font-size: 0.9rem;
+            }
+    }
+    &__nameDate {
+        display: flex;
+        justify-content: space-between;
+            @include desktop {
+                flex-wrap: wrap;
+            }
+    }
+    &__date { 
+        margin-top: 1.55rem;
+        font-weight: 400;
+        color: #AFAFAF;
+        font-size: 1.2rem;
+
+            @include tablet { 
+                font-size: 0.9rem;
+            }
+    }
+    &__content {
+        margin-top: 0;
+        flex-grow: 1;
+    }
+    &__icon {
+        margin-top: 1.5rem;
+        margin-right: 2rem;
+        background-color: #E1E1E1;
+        height: 45px;
+        width: 4.2041rem;
+        border-radius: 50%;
+
+            @include desktop { 
+                margin-right: 1rem;;
+            }
+    }  
+}
 
 .footer
 {
@@ -430,8 +555,7 @@ html, body {
     font-family: "Avenir";
     padding: 1.2rem 0.5rem 1.2rem 0.6rem;
 
-        @include desktop
-        {
+        @include desktop {
             padding: 2rem 0.5rem 1.2rem 5.5rem;
         }
 
@@ -441,27 +565,23 @@ html, body {
         flex-direction: column;
         flex-wrap: wrap;
 
-            @include tablet
-            {
+            @include tablet {
             flex-direction: row;
             }
 
     }
 
-    address
-    {
+    address {
         font-style: normal; /* Resetting the default (italic) style */
     }
    
-    &__head
-    {
+    &__head {
         padding-top: 1.5rem;
         padding-bottom: 0.5rem;
         padding-left: 1rem;
         padding-right: 1rem;
 
-            &--title
-            {
+            &--title {
             font-family: "Avenir";
             font-weight: 600;
             font-style: normal;
@@ -469,15 +589,13 @@ html, body {
             font-size: 2rem;
             color: $header-footer-text;
 
-                @include tablet
-                {
+                @include tablet {
                     font-family: "Avenir";
-                    font-weight: 700;
+                    font-weight: 600;
                     font-size: 2.5rem;
                 }
 
-                @include desktop
-                {
+                @include desktop {
                     font-weight: 400;
                     font-size: 2rem;
                 }
@@ -490,57 +608,48 @@ html, body {
         align-content: flex-start;
 
 
-            @include tablet
-            {
+            @include tablet {
                 display: flex;
                 align-content: flex-start;
             }
             
-            @include desktop
-            {
+            @include desktop {
                 padding-left: 1.2rem;
             }
     
-        &--insta, &--facebook, &--twitter
-        {
+        &--insta, &--facebook, &--twitter {
             height: 2rem;
             width: 2rem;
             padding: 1.2rem;
 
-            &:hover
-            {
+            &:hover {
             transform: scale(1.1);
             }
 
-                @include tablet
-                {
+                @include tablet {
                     height: 1.6rem;
                     width: 1.6rem;
                     padding-top: 2.5rem;
                 }
 
-                @include desktop
-                {
+                @include desktop {
                     height: 1.3rem;
                     width: 1.3rem;
                     padding-top: 2.1rem;
                 }
         }
-        &--bandsitelogo
-        {
+        &--bandsitelogo {
             height: 1.6rem;
             padding: 1.2rem;
 
-                @include tablet
-                {
+                @include tablet {
                    position: absolute;
                    height: 1.2rem;
                    top: 2.7rem;
                    right: 2rem; 
                 }
 
-                @include desktop
-                {
+                @include desktop {
                     height: 1rem;
                     right: 5.5rem;
                 }
@@ -548,42 +657,36 @@ html, body {
     }
     &__contactbox
     {
-            @include tablet
-            {
+            @include tablet {
                 display: flex;
                 flex-wrap: wrap;
                 padding-top: 1rem;
                 padding-bottom: 1rem; 
             }
 
-            @include desktop
-            {
+            @include desktop {
                 gap: 1.75rem;
             }
-        &--reachout1, &--reachout2, &--reachout3
-        {
+        &--reachout1, &--reachout2, &--reachout3 {
             font-family: "Avenir";
             font-weight: 400;
             font-size: 1rem;
             padding: 0.5rem;
             line-height: 1.3rem;
 
-                @include tablet
-                {
+                @include tablet {
                     font-size: 0.95rem;
                     line-height: 1.5rem;
                 }
 
-                @include desktop
-                {
+                @include desktop {
                     font-size: 0.8rem;
                     line-height: 1.25rem;
                 }
         }
         &--reachout1-title, &--reachout1-info, &--reachout1-email,
         &--reachout2-title, &--reachout2-info, &--reachout2-email,
-        &--reachout3-title, &--reachout3-info, &--reachout3-email
-        {
+        &--reachout3-title, &--reachout3-info, &--reachout3-email {
             @include margin-reset;
              padding: 0.5rem;
         } 

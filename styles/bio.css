@@ -355,39 +355,215 @@ html, body {
 }
 
 .comment {
-  padding-left: 1.4rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
   padding-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .comment {
+    padding-left: 5rem;
+    padding-right: 5.2rem;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .comment {
+    padding-left: 13rem;
+    padding-right: 13rem;
+  }
 }
 .comment__form {
-  padding-left: 4.5rem;
-  padding-right: 3rem;
+  padding-right: 1.5rem;
+  display: flex;
+  border-bottom: 0.15rem solid #E1E1E1;
+  padding-bottom: 2rem;
+}
+@media screen and (min-width: 768px) {
+  .comment__form {
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .comment__form {
+    margin-right: 10rem;
+    margin-left: 10rem;
+  }
 }
 .comment__title {
   font-weight: 600;
-  font-size: 1.85rem;
+  font-size: 2.1rem;
+}
+@media screen and (min-width: 768px) {
+  .comment__title {
+    font-size: 3rem;
+  }
+}
+.comment__profileIcon {
+  margin-top: 1.5rem;
+  margin-right: 1rem;
+  height: 55px;
+  width: 55px;
+  border-radius: 50%;
+}
+.comment__profileIcon img {
+  width: 100%;
+  height: auto;
+  transform: scale(1.8);
+}
+@media screen and (min-width: 768px) {
+  .comment__formInputSection {
+    flex-grow: 1;
+  }
 }
 .comment__label {
+  font-weight: 600;
   color: #AFAFAF;
-  font-weight: 400;
   font-size: 0.9rem;
-  padding-bottom: 0.25rem;
+  padding-bottom: 1rem;
 }
 .comment__input1, .comment__input2 {
   font-size: 1.1rem;
+  font-weight: 400;
   height: 2rem;
-  width: 100%;
+  width: 95%;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
   padding: 0.5rem;
   margin-bottom: 1.2rem;
-  border-color: #AFAFAF;
+  border: 0.125rem solid #E1E1E1;
+  background-color: #FAFAFA;
   border-radius: 0.3rem;
+}
+.comment__input1::-moz-placeholder, .comment__input2::-moz-placeholder {
+  color: black;
+  position: absolute;
+  top: 0.9rem;
+  left: 0.8rem;
+}
+.comment__input1::placeholder, .comment__input2::placeholder {
+  color: black;
+  position: absolute;
+  top: 0.9rem;
+  left: 0.8rem;
+}
+@media screen and (min-width: 768px) {
+  .comment__input1, .comment__input2 {
+    width: 100%;
+    font-size: 0.9rem;
+  }
 }
 .comment__input2 {
   height: 6rem;
 }
+@media screen and (min-width: 768px) {
+  .comment__buttonEl {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
 .comment__button {
-  height: 3rem;
+  height: 3.5rem;
+  border: none;
   width: 100%;
+  font-weight: 400;
+  font-size: 1.4rem;
+  color: white;
+  background-color: #323232;
   border-radius: 0.3rem;
+  padding: 0;
+}
+.comment__button:hover {
+  background-color: black;
+}
+@media screen and (min-width: 768px) {
+  .comment__button {
+    width: 35%;
+    height: 3.2rem;
+    font-size: 1.2rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .comment__button {
+    width: 33%;
+    height: 2.5rem;
+    font-size: 1rem;
+  }
+}
+.comment__post {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .comment__post {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .comment__post {
+    width: 72%;
+    margin-left: 10rem;
+    margin-right: 10rem;
+  }
+}
+.comment__container {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 0.15rem solid #E1E1E1;
+  margin-bottom: 0.5rem;
+}
+.comment__mainComment {
+  font-weight: 400;
+  height: auto;
+  width: 32.1006rem;
+  font-size: 1.2rem;
+  padding-right: 1.2rem;
+  flex-grow: 1;
+}
+@media screen and (min-width: 768px) {
+  .comment__mainComment {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    font-size: 0.9rem;
+  }
+}
+.comment__nameDate {
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (min-width: 1280px) {
+  .comment__nameDate {
+    flex-wrap: wrap;
+  }
+}
+.comment__date {
+  margin-top: 1.55rem;
+  font-weight: 400;
+  color: #AFAFAF;
+  font-size: 1.2rem;
+}
+@media screen and (min-width: 768px) {
+  .comment__date {
+    font-size: 0.9rem;
+  }
+}
+.comment__content {
+  margin-top: 0;
+  flex-grow: 1;
+}
+.comment__icon {
+  margin-top: 1.5rem;
+  margin-right: 2rem;
+  background-color: #E1E1E1;
+  height: 45px;
+  width: 4.2041rem;
+  border-radius: 50%;
+}
+@media screen and (min-width: 1280px) {
+  .comment__icon {
+    margin-right: 1rem;
+  }
 }
 
 .footer {
@@ -435,7 +611,7 @@ html, body {
 @media screen and (min-width: 768px) {
   .footer__head--title {
     font-family: "Avenir";
-    font-weight: 700;
+    font-weight: 600;
     font-size: 2.5rem;
   }
 }
