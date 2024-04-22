@@ -47,36 +47,41 @@
                 }
         }
         
-        &__optionsList {
+        &__optionsList
+        {
         display: flex;
-        flex-grow: 1;
         list-style: none;
          @include fit;
         padding-top: 0.7rem;
-        margin-bottom: 0.7rem;
+        height:fit-content;
 
          
-            @include tablet {
+            @include tablet
+            {
                 display: flex;
                 gap: 2rem;
                 font-size: 1rem; 
                 padding-top: 1.9rem;
             }
 
-            @include desktop {
+            @include desktop
+            {
                 font-size: 0.9rem;
             }
+            
+            a:hover {
+                border-bottom: 2px solid white;
+            }
+    
         }
 
-        &__options-option1, &__options-option2 {
+        &__options-option1, &__options-option2
+        {
         list-style-type: none;
         display: flex;
         flex-grow: 1;
         justify-content: center;
-
-            &:hover {
-             border-bottom: 1px white;
-            }
+        padding-bottom: 0.4rem;
         }
 }
 .hero {
