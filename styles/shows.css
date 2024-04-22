@@ -296,6 +296,9 @@ html, body {
   background-color: #E1E1E1;
   outline: none;
 }
+.shows__eachShow[show-selected=true] {
+  background-color: #E1E1E1;
+}
 @media screen and (min-width: 768px) {
   .shows__eachShow {
     display: flex;

@@ -270,6 +270,10 @@
                 outline: none;
             }
 
+            &[show-selected='true'] {
+                background-color: #E1E1E1;
+            }
+
         @include tablet {
             display: flex;
             justify-content: space-around;

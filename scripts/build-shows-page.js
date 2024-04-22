@@ -152,6 +152,8 @@ function createShowsContent(showEl) {
     const buttonEl = createShowButton();
     eachShowEl.appendChild(buttonEl);
 
+    eachShowEl.addEventListener('click',showClick);
+
     return eachShowEl;
 
 }
@@ -209,4 +211,20 @@ function createShowButton() {
     const buttonEl = createElementWithClass("button", "shows__button")
     buttonEl.innerText = "BUY TICKETS";
     return buttonEl;
+}
+
+function showClick(event) {
+    const clickedItem = event.currentTarget;
+    const isSelected = clickedItem.getAttribute('show-selected');
+
+    if(isSelected === 'true') {
+        clickedItem.removeAttribute('show-selected');
+    }
+    else {
+        const previouslySelected = document.querySelector('.shows__eachShow[show-selected="true"]');
+        if (previouslySelected) {
+            previouslySelected.removeAttribute('show-selected');
+        }
+        clickedItem.setAttribute('show-selected','true');
+    }
 }

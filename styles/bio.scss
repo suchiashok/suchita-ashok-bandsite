@@ -54,15 +54,17 @@
                     padding-left: 4.2rem;
                 }
         }
-        
+        &__options {
+            display: flex;
+            flex-direction: column;
+        }
         &__optionsList
         {
         display: flex;
-        flex-grow: 1;
         list-style: none;
          @include fit;
         padding-top: 0.7rem;
-        margin-bottom: 0.7rem;
+        height:fit-content;
 
          
             @include tablet
@@ -77,6 +79,10 @@
             {
                 font-size: 0.9rem;
             }
+            
+            a:hover {
+                border-bottom: 2px solid white;
+            }
         }
 
         &__options-option1, &__options-option2
@@ -85,12 +91,9 @@
         display: flex;
         flex-grow: 1;
         justify-content: center;
-
-            &:hover 
-            {
-             border-bottom: 1px white;
-            }
+        padding-bottom: 0.4rem;
         }
+
 }
 
 .hero
