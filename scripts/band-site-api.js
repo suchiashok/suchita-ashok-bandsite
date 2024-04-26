@@ -19,7 +19,7 @@ export default class BandSiteApi {
     async getComment() {
         try {
             const response = await axios.get(this.commentUrl)
-        return response.data;
+        return response.data.reverse();
         } catch (error) {
             console.log('Error', error);
         }

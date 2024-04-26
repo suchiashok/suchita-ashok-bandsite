@@ -39,6 +39,12 @@ async function renderNewComments() {
 }
 }
 
+function formatDate(timestamp) {
+   const date = new Date(timestamp);
+   const formattedDate = `${date.getMonth()+1}/${date.getDate()}/${date.getFullYear()} ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`; 
+   return formattedDate;
+}
+
 // function to renderComments
 function renderComments(commentObj) {
 
@@ -64,7 +70,8 @@ commentContent.textContent = commentObj.comment;
 
 const commentDate = document.createElement("time");
 commentDate.classList.add("comment__date");
-commentDate.textContent = commentObj.date;
+commentDate.innerText = formatDate(commentObj.timestamp);
+// commentDate.textContent = commentObj.date;
 
 commentPost.appendChild(commentContainer);
 commentContainer.appendChild(commentIcon);
@@ -83,22 +90,21 @@ form.addEventListener("submit", async (e) => {
 //Getting the inputs from the form
 const name = document.getElementById("nameInput").value;
 const commentText = document.getElementById("commentInput").value;
-const dateLabel = document.getElementById("date").value;
+// const dateLabel = document.getElementById("date").value;
 
 //Obj for each comment
 const newComment = {
     name : name,
     comment: commentText,
-    date: dateLabel
 };
 
 // commentArray.unshift(newComment);
 // renderNewComments();
 // document.getElementById("nameInput").value = "";
 // document.getElementById("commentInput").value = "";
-
 // });
 // console.log(commentArray);
+
 try {
     await BandApi.postComment(newComment);
     await renderNewComments();
