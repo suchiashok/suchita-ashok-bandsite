@@ -2,30 +2,11 @@ import BandSiteApi from "./band-site-api.js";
 
 const form = document.querySelector(".comment__form");
 const BandApi = new BandSiteApi("37a62273-2e78-413f-befb-0357b75e2328");
-// Default three comments
-// const commentArray = [
-//     {name: "Victor Pinto", 
-//     comment: "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.",
-//     date: "11/02/2023"},
-//     {name: "Christina Cabrera",
-//     comment: "I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day.",
-//     date: "10/28/2023"},
-//     {name: "Isaac Tadesse",
-//     comment: "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough.",
-//     date: "10/20/2023"}
-// ];
 
 const commentPost = document.createElement("div");
 commentPost.classList.add("comment__post");
-document.querySelector(".comment").appendChild(commentPost);
+document.querySelector(".comment__formAndPost").appendChild(commentPost);
 
-
-// function renderNewComments() {
-//     commentPost.innerHTML = "";
-//     commentArray.forEach(commentObj => {
-//         renderComments(commentObj);
-//     });
-// }
 
 async function renderNewComments() {
     try {
@@ -71,7 +52,6 @@ commentContent.textContent = commentObj.comment;
 const commentDate = document.createElement("time");
 commentDate.classList.add("comment__date");
 commentDate.innerText = formatDate(commentObj.timestamp);
-// commentDate.textContent = commentObj.date;
 
 commentPost.appendChild(commentContainer);
 commentContainer.appendChild(commentIcon);
@@ -90,20 +70,12 @@ form.addEventListener("submit", async (e) => {
 //Getting the inputs from the form
 const name = document.getElementById("nameInput").value;
 const commentText = document.getElementById("commentInput").value;
-// const dateLabel = document.getElementById("date").value;
 
 //Obj for each comment
 const newComment = {
     name : name,
     comment: commentText,
 };
-
-// commentArray.unshift(newComment);
-// renderNewComments();
-// document.getElementById("nameInput").value = "";
-// document.getElementById("commentInput").value = "";
-// });
-// console.log(commentArray);
 
 try {
     await BandApi.postComment(newComment);

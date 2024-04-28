@@ -25,15 +25,16 @@ html, body {
   flex-direction: column;
   background-color: #323232;
   list-style-type: none;
+  height: 5.6rem;
 }
 @media screen and (min-width: 768px) {
   .navbar {
     display: flex;
     flex-direction: row;
     gap: 5rem;
-    padding: 1.3rem;
-    padding-top: 0.8rem;
+    height: 5rem;
     padding-left: 3rem;
+    padding-bottom: 0;
   }
 }
 .navbar a {
@@ -65,21 +66,21 @@ html, body {
     padding-left: 4.2rem;
   }
 }
+.navbar__options {
+  height: 100%;
+}
 .navbar__optionsList {
   display: flex;
+  flex-direction: row;
+  justify-content: space-around;
   list-style: none;
-  margin: 0;
-  padding: 0;
-  padding-top: 0.7rem;
-  height: -moz-fit-content;
-  height: fit-content;
+  height: 100%;
 }
 @media screen and (min-width: 768px) {
   .navbar__optionsList {
     display: flex;
     gap: 2rem;
     font-size: 1rem;
-    padding-top: 1.9rem;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -90,12 +91,25 @@ html, body {
 .navbar__optionsList a:hover {
   border-bottom: 2px solid white;
 }
-.navbar__options-option1, .navbar__options-option2 {
-  list-style-type: none;
+.navbar__options-option {
   display: flex;
   flex-grow: 1;
+  align-items: center;
   justify-content: center;
-  padding-bottom: 0.4rem;
+}
+.navbar__options-option--active {
+  border-bottom: 2px solid white;
+}
+.navbar__options-text {
+  flex-grow: 1;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .navbar__options-text {
+    display: flex;
+    height: 100%;
+    align-items: center;
+  }
 }
 
 .hero {

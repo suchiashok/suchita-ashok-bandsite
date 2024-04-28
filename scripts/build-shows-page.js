@@ -89,8 +89,9 @@ function createShowsContent(showEl) {
 function formatDate(timestamp) {
     try {
         const date = new Date(timestamp);
-        const formattedDate = `${date.getMonth()+1}/${date.getDate()}/${date.getFullYear()}`; 
-        return formattedDate;
+        const showDateFormat = { weekday: "short", month: "short", day: "2-digit", year: "numeric"};
+        const formattedDate = date.toLocaleDateString('en-US', showDateFormat);
+        return formattedDate.replace(',','');
     } catch (error) {
         console.log("error",error);
     }

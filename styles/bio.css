@@ -25,7 +25,7 @@ html, body {
   flex-direction: column;
   background-color: #323232;
   list-style-type: none;
-  height: 5rem;
+  height: 5.6rem;
 }
 @media screen and (min-width: 768px) {
   .navbar {
@@ -91,14 +91,14 @@ html, body {
 .navbar__optionsList a:hover {
   border-bottom: 2px solid white;
 }
-.navbar__options-option1 a, .navbar__options-option2 a {
-  list-style-type: none;
-}
-.navbar__options-option1, .navbar__options-option2 {
+.navbar__options-option {
   display: flex;
   flex-grow: 1;
   align-items: center;
   justify-content: center;
+}
+.navbar__options-option--active {
+  border-bottom: 2px solid white;
 }
 .navbar__options-text {
   flex-grow: 1;
@@ -205,14 +205,19 @@ html, body {
     padding-right: 3.5rem;
   }
 }
+@media screen and (min-width: 1280px) {
+  .about__part1 {
+    padding-right: 0;
+  }
+}
 .about__image {
   height: auto;
   width: 100%;
 }
 @media screen and (min-width: 1280px) {
   .about__image {
-    height: calc(60vh - 220px);
-    width: calc(72vw - 100px);
+    height: 40vh;
+    width: 60vw;
   }
 }
 .about__quote {
@@ -254,6 +259,11 @@ html, body {
     padding-left: 3.5rem;
     padding-right: 3.5rem;
     padding-top: 1.8rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .about__part2 {
+    padding-right: 6rem;
   }
 }
 .about__title2 {
@@ -390,20 +400,12 @@ html, body {
   }
 }
 .comment__form {
-  padding-right: 1.5rem;
   display: flex;
   border-bottom: 0.15rem solid #E1E1E1;
-  padding-bottom: 2rem;
 }
 @media screen and (min-width: 768px) {
   .comment__form {
     justify-content: center;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .comment__form {
-    margin-right: 10rem;
-    margin-left: 10rem;
   }
 }
 .comment__title {
@@ -443,10 +445,7 @@ html, body {
   font-weight: 400;
   height: 2rem;
   width: 95%;
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
   padding: 0.5rem;
-  margin-bottom: 1.2rem;
   border: 0.125rem solid #E1E1E1;
   background-color: #FAFAFA;
   border-radius: 0.3rem;
@@ -513,13 +512,6 @@ html, body {
 @media screen and (min-width: 768px) {
   .comment__post {
     width: 100%;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .comment__post {
-    width: 72%;
-    margin-left: 10rem;
-    margin-right: 10rem;
   }
 }
 .comment__container {

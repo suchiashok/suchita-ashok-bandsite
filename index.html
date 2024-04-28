@@ -14,8 +14,8 @@
             </div>
             <div class="navbar__options">
                 <div class="navbar__optionsList">
-                    <a class="navbar__options-option1" href="index.html"><span class="navbar__options-text">Biography</span></a>
-                    <a class="navbar__options-option2" href="pages/shows.html"><span class="navbar__options-text">Shows</span></a>
+                    <a class="navbar__options-option navbar__options-option--active" href="index.html"><span class="navbar__options-text">Biography</span></a>
+                    <a class="navbar__options-option" href="pages/shows.html"><span class="navbar__options-text">Shows</span></a>
                 </div>
             </div>
         </nav>
@@ -75,30 +75,32 @@
         </section>
         <section class="comment">
             <h2 class="comment__title">Join the Conversation</h2>
-            <div class="comment__form">
-            <img class="comment__profileIcon" src="assets/Images/Mohan-muruge.jpg" alt="convo-profilePic">
-                <form class="comment__formInputSection">
-                    <label class="comment__label" for="name">NAME</label>
-                    <input class="comment__input1"
-                        type="text"
-                        name="name"
-                        id="nameInput"
-                        placeholder="Enter your name"
-                        required />
-                    <label class="comment__label" id="date" for="comment">COMMENT</label>
-                    <input class="comment__input2"
-                        type="text"
-                        name="comment"
-                        id="commentInput"
-                        placeholder="Add a new comment"
-                        required />
-                    <div class="comment__buttonEl">
-                        <button class="comment__button">
-                            COMMENT
-                        </button>
-                    </div>
-                </form> 
-            </div>    
+            <div class="comment__formAndPost">
+                <div class="comment__form">
+                <img class="comment__profileIcon" src="assets/Images/Mohan-muruge.jpg" alt="convo-profilePic">
+                    <form class="comment__formInputSection">
+                        <label class="comment__label" for="name">NAME</label>
+                        <input class="comment__input1"
+                            type="text"
+                            name="name"
+                            id="nameInput"
+                            placeholder="Enter your name"
+                            required />
+                        <label class="comment__label" id="date" for="comment">COMMENT</label>
+                        <input class="comment__input2"
+                            type="text"
+                            name="comment"
+                            id="commentInput"
+                            placeholder="Add a new comment"
+                            required />
+                        <div class="comment__buttonEl">
+                            <button class="comment__button">
+                                COMMENT
+                            </button>
+                        </div>
+                    </form> 
+                </div>    
+            </div>
         </section>
     </main>
     <footer>
