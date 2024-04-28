@@ -25,6 +25,7 @@ html, body {
   flex-direction: column;
   background-color: #323232;
   list-style-type: none;
+  height: 5rem;
 }
 @media screen and (min-width: 768px) {
   .navbar {
@@ -66,14 +67,13 @@ html, body {
   }
 }
 .navbar__options {
-  display: flex;
   height: 100%;
 }
 .navbar__optionsList {
   display: flex;
+  flex-direction: row;
+  justify-content: space-around;
   list-style: none;
-  margin: 0;
-  padding: 0;
   height: 100%;
 }
 @media screen and (min-width: 768px) {
@@ -91,11 +91,25 @@ html, body {
 .navbar__optionsList a:hover {
   border-bottom: 2px solid white;
 }
-.navbar__options-option1, .navbar__options-option2 {
+.navbar__options-option1 a, .navbar__options-option2 a {
   list-style-type: none;
+}
+.navbar__options-option1, .navbar__options-option2 {
+  display: flex;
   flex-grow: 1;
-  text-align: justify;
+  align-items: center;
   justify-content: center;
+}
+.navbar__options-text {
+  flex-grow: 1;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .navbar__options-text {
+    display: flex;
+    height: 100%;
+    align-items: center;
+  }
 }
 
 .hero {
