@@ -1,94 +1,12 @@
-const showsArray = [
-    {
-        date: {
-            label: "DATE",
-            info: "Mon Sept 09 2024"
-        },
-        venue: {
-            label: "VENUE",
-            info: "Ronald Lane"
-        },
-        location: {
-            label: "LOCATION",
-            info: "San Francisco, CA"
-        }
-    },
-    {
-        date: {
-            label: "DATE",
-            info: "Tue Sept 17 2024"
-        },
-        venue: {
-            label: "VENUE",
-            info: "Pier 3 East"
-        },
-        location: {
-            label: "LOCATION",
-            info: "San Francisco, CA"
-        }
-    },
-    {
-        date: {
-            label: "DATE",
-            info: "Sat Oct 12 2024"
-        },
-        venue: {
-            label: "VENUE",
-            info: "View Lounge"
-        },
-        location: {
-            label: "LOCATION",
-            info: "San Francisco, CA"
-        }
-    },
-    {
-        date: {
-            label: "DATE",
-            info: "Sat Nov 16 2024"
-        },
-        venue: {
-            label: "VENUE",
-            info: "Hyatt Agency"
-        },
-        location: {
-            label: "LOCATION",
-            info: "San Francisco, CA"
-        }
-    },
-    {
-        date: {
-            label: "DATE",
-            info: "Fri Nov 29 2024"
-        },
-        venue: {
-            label: "VENUE",
-            info: "Moscow Center"
-        },
-        location: {
-            label: "LOCATION",
-            info: "San Francisco, CA"
-        }
-    },
-    {
-        date: {
-            label: "DATE",
-            info: "Wed Dec 18 2024 "
-        },
-        venue: {
-            label: "VENUE",
-            info: "Press Club"
-        },
-        location: {
-            label: "LOCATION",
-            info: "San Francisco, CA"
-        }
-    },
+import BandSiteApi from "./band-site-api.js";
 
-]
+const BandApi = new BandSiteApi("37a62273-2e78-413f-befb-0357b75e2328");
 
+
+const main = document.querySelector('main');
 const showsSection = document.createElement("section");
 showsSection.classList.add("shows");
-document.body.appendChild(showsSection);
+main.appendChild(showsSection);
 
 const title = document.createElement("h2");
 title.classList.add("shows__title");
@@ -123,10 +41,20 @@ showsSection.appendChild(showsAll);
 const labelsContainer = createTabletLabels();
 showsAll.appendChild(labelsContainer);
 
-showsArray.forEach(show => {
-    const eachShowEl = createShowsContent(show);
-    showsAll.appendChild(eachShowEl);
-})
+async function showsApi() {
+    try {
+        const fetchShows = await BandApi.getShows();
+        
+        fetchShows.forEach(show => {
+            const eachShowEl = createShowsContent(show);
+            showsAll.appendChild(eachShowEl);
+        });
+    } catch (error) {
+        console.log('Error displaying shows',error);
+    }
+}
+
+showsApi();
 
 //function to create elements with class names
 function createElementWithClass(elementName, className) {
@@ -140,13 +68,13 @@ function createShowsContent(showEl) {
     //appending date,venue,location to the parent child
     const eachShowEl = createElementWithClass("div","shows__eachShow")
 
-    const dateEl = createShowDate(showEl.date)
+    const dateEl = createShowDate(showEl)
     eachShowEl.appendChild(dateEl);
 
-    const venueEl = createShowVenue(showEl.venue)
+    const venueEl = createShowVenue(showEl)
     eachShowEl.appendChild(venueEl);
 
-    const locationEl = createShowLocation(showEl.location)
+    const locationEl = createShowLocation(showEl)
     eachShowEl.appendChild(locationEl);
 
     const buttonEl = createShowButton();
@@ -158,33 +86,43 @@ function createShowsContent(showEl) {
 
 }
 
-//function for Date  
-function createShowDate(date) {
+function formatDate(timestamp) {
+    try {
+        const date = new Date(timestamp);
+        const formattedDate = `${date.getMonth()+1}/${date.getDate()}/${date.getFullYear()}`; 
+        return formattedDate;
+    } catch (error) {
+        console.log("error",error);
+    }
+}
 
+//function for Date  
+function createShowDate(show) {
     const dateEl = createElementWithClass("div","shows__date")
 
     const dateLabelEl = createElementWithClass("span", "shows__date-label");
-    dateLabelEl.innerText = date.label;
+    dateLabelEl.innerText = "DATE";
     dateEl.appendChild(dateLabelEl);
-
+ 
+    const formattedDate = formatDate(show.date);
     const dateInfoEl = createElementWithClass("span", "shows__date-info");
-    dateInfoEl.innerText = date.info;
+    dateInfoEl.innerText = formattedDate;
     dateEl.appendChild(dateInfoEl);
 
     return dateEl;
 }
 
 //function for Venue
-function createShowVenue(venue) {
+function createShowVenue(place) {
 
     const venueEl = createElementWithClass("div","shows__venue")
 
     const venueLabelEl = createElementWithClass("span", "shows__venue-label");
-    venueLabelEl.innerText = venue.label;
+    venueLabelEl.innerText = "VENUE" ;
     venueEl.appendChild(venueLabelEl);
 
     const venueInfoEl = createElementWithClass("span", "shows__venue-info");
-    venueInfoEl.innerText = venue.info;
+    venueInfoEl.innerText = place.place;
     venueEl.appendChild(venueInfoEl);
 
     return venueEl;
@@ -196,11 +134,11 @@ function createShowLocation(location) {
     const locationEl = createElementWithClass("div","shows__location")
 
     const locationLabelEl = createElementWithClass("span", "shows__location-label");
-    locationLabelEl.innerText = location.label;
+    locationLabelEl.innerText = "LOCATION";
     locationEl.appendChild(locationLabelEl);
 
     const locationInfoEl = createElementWithClass("span", "shows__location-info");
-    locationInfoEl.innerText = location.info;
+    locationInfoEl.innerText = location.location;
     locationEl.appendChild(locationInfoEl);
 
     return locationEl;

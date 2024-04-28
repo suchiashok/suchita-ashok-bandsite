@@ -31,10 +31,9 @@ html, body {
     display: flex;
     flex-direction: row;
     gap: 5rem;
-    padding: 1.3rem;
-    padding-top: 0.8rem;
+    height: 5rem;
     padding-left: 3rem;
-    padding-bottom: 0.5rem;
+    padding-bottom: 0;
   }
 }
 .navbar a {
@@ -68,23 +67,20 @@ html, body {
 }
 .navbar__options {
   display: flex;
-  flex-direction: column;
+  height: 100%;
 }
 .navbar__optionsList {
   display: flex;
   list-style: none;
   margin: 0;
   padding: 0;
-  padding-top: 0.7rem;
-  height: -moz-fit-content;
-  height: fit-content;
+  height: 100%;
 }
 @media screen and (min-width: 768px) {
   .navbar__optionsList {
     display: flex;
     gap: 2rem;
     font-size: 1rem;
-    padding-top: 1.9rem;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -97,10 +93,9 @@ html, body {
 }
 .navbar__options-option1, .navbar__options-option2 {
   list-style-type: none;
-  display: flex;
   flex-grow: 1;
+  text-align: justify;
   justify-content: center;
-  padding-bottom: 0.4rem;
 }
 
 .hero {

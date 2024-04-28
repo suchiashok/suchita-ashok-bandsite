@@ -17,10 +17,11 @@
             display: flex;
             flex-direction: row;
             gap: 5rem;
-            padding: 1.3rem;
-            padding-top: 0.8rem;
+            height: 5rem;
+            // padding: 1.3rem;
+            // padding-top: 0.8rem;
             padding-left: 3rem;
-            padding-bottom: 0.5rem;
+            padding-bottom: 0;
         }
 
         a{
@@ -57,15 +58,14 @@
         }
         &__options {
             display: flex;
-            flex-direction: column;
+            height: 100%;
         }
         &__optionsList
         {
         display: flex;
         list-style: none;
          @include fit;
-        padding-top: 0.7rem;
-        height:fit-content;
+        height: 100%;
 
          
             @include tablet
@@ -73,7 +73,7 @@
                 display: flex;
                 gap: 2rem;
                 font-size: 1rem; 
-                padding-top: 1.9rem;
+            
             }
 
             @include desktop
@@ -89,10 +89,9 @@
         &__options-option1, &__options-option2
         {
         list-style-type: none;
-        display: flex;
         flex-grow: 1;
+        text-align: justify;
         justify-content: center;
-        padding-bottom: 0.4rem;
         }
 }
 
