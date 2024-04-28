@@ -8,7 +8,7 @@ export default class BandSiteApi {
 //method to post the comments
     async postComment(commentObj) {
         try {
-            const response = await axios.post(`${this.baseUrl}/comments?api_key=${this.apiKey}`, commentObj)
+            const response = await axios.post(`${this.baseUrl}comments?api_key=${this.apiKey}`, commentObj)
             return response.data;
         }
         catch(error) {

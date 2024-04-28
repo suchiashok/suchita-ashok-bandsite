@@ -390,18 +390,27 @@ html, body {
   .comment {
     padding-left: 5rem;
     padding-right: 5.2rem;
-    justify-content: center;
   }
 }
 @media screen and (min-width: 1280px) {
   .comment {
+    align-items: center;
     padding-left: 13rem;
     padding-right: 13rem;
   }
 }
+@media screen and (min-width: 1280px) {
+  .comment__formAndPost {
+    display: flex;
+    flex-direction: column;
+    width: 62%;
+  }
+}
 .comment__form {
+  padding-right: 1.5rem;
   display: flex;
   border-bottom: 0.15rem solid #E1E1E1;
+  padding-bottom: 2rem;
 }
 @media screen and (min-width: 768px) {
   .comment__form {
@@ -415,6 +424,12 @@ html, body {
 @media screen and (min-width: 768px) {
   .comment__title {
     font-size: 3rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .comment__title {
+    font-size: 2.5rem;
+    margin-right: 25rem;
   }
 }
 .comment__profileIcon {
@@ -445,7 +460,10 @@ html, body {
   font-weight: 400;
   height: 2rem;
   width: 95%;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
   padding: 0.5rem;
+  margin-bottom: 1.2rem;
   border: 0.125rem solid #E1E1E1;
   background-color: #FAFAFA;
   border-radius: 0.3rem;

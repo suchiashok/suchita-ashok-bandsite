@@ -374,19 +374,27 @@
         @include tablet {
             padding-left: 5rem;
             padding-right: 5.2rem;
-            justify-content: center;
         }
 
         @include desktop { 
+            align-items: center;
             padding-left: 13rem;
             padding-right: 13rem;
         }
-
+    
+    &__formAndPost {
+        @include desktop {
+            display: flex;
+            flex-direction: column;
+            width: 62%;
+            
+        }
+    }
     &__form {
-        // padding-right: 1.5rem;
+        padding-right: 1.5rem;
         display: flex;
         border-bottom: .15rem solid #E1E1E1;
-        // padding-bottom: 2rem;
+        padding-bottom: 2rem;
         
 
             @include tablet {
@@ -405,6 +413,11 @@
 
             @include tablet { 
                 font-size: 3rem;
+            }
+
+            @include desktop {
+                font-size: 2.5rem;
+                margin-right: 25rem;
             }
     }
 
@@ -441,10 +454,10 @@
         font-weight: 400;
         height: 2rem;
         width: 95%;
-        // margin-top: 0.5rem;
-        // margin-bottom: 0.5rem;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
         padding: 0.5rem;
-        // margin-bottom: 1.2rem;
+        margin-bottom: 1.2rem;
         border: .125rem solid #E1E1E1;
         background-color:#FAFAFA;
         border-radius: 0.3rem;
