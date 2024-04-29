@@ -26,7 +26,6 @@ function formatDate(timestamp) {
    return formattedDate;
 }
 
-// function to renderComments
 function renderComments(commentObj) {
 
 const commentContainer = document.createElement("div");
@@ -49,7 +48,6 @@ const commentContent = document.createElement("p");
 commentContent.classList.add("comment__content");
 commentContent.textContent = commentObj.comment;
 
-//testing like
 const commentLikesDiv = document.createElement("div");
 commentLikesDiv.classList.add("comment__likesDiv");
 

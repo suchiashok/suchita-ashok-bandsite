@@ -4,197 +4,77 @@
 @use 'partials/global' as *;
 
 
-.navbar
-{
-    font-weight: 400;
-    display: flex;
-    flex-direction: column;
-    background-color: $header-footer-background;
-    list-style-type: none;
-    height: 5.6rem;
-
-        @include tablet
-        {
-            display: flex;
-            flex-direction: row;
-            gap: 5rem;
-            height: 5rem;
-            padding-left: 3rem;
-            padding-bottom: 0;
-        }
-
-        a{
-            text-decoration: none;
-            color: $header-footer-text;
-        }
-
-        &__title
-        {
-            display: flex;
-            justify-content: center;
-            padding-top: 1rem;
-            padding-bottom: 0;
-                img
-                {
-                    height: auto;
-                    margin-top: 0.5rem;
-
-                    @include tablet
-                    {
-                        margin-top: 1rem;
-                    }
-
-                    @include desktop
-                    {
-                        margin-top: 1.1rem;
-                    }
-                }
-
-                @include desktop
-                {
-                    padding-left: 4.2rem;
-                }
-        }
-        &__options {
-            height: 100%; 
-
-        }
-        &__optionsList
-        {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        list-style: none;
-        height: 100%;
-        
-
-            @include tablet {
-                display: flex;
-                gap: 2rem;
-                font-size: 1rem; 
-            }
-
-            @include desktop {
-                font-size: 0.9rem;
-            }
-
-            a:hover {
-                border-bottom: 2px solid white;
-            }
-        }
-
-        &__options-option {
-        display: flex;
-        flex-grow: 1;
-        align-items: center;
-        justify-content: center;
-        }
-
-        &__options-option--active {
-            border-bottom: 2px solid white;
-        }
-
-        &__options-text {
-
-            flex-grow: 1;
-            text-align: center;
-          
-            @include tablet {
-            display: flex;
-            height: 100%;
-            align-items: center;;
-            }
-        }
-}
-
 .hero
 {
     background-image: url(/assets/Images/hero-bio.jpg);
     background-size: cover;
     
-        @include tablet
-        {
+        @include tablet {
             height: calc(20vw + 370px);
         }
 
-        @include desktop
-        {
+        @include desktop {
             height: calc(45vw - 25px);
         }
 
-        &__bg
-        {
+        &__bg {
             background-color: rgba($header-footer-background, 0.5);
             height: 15rem;
             display: flex;
             align-items: center;
 
-                @include tablet
-                {
+                @include tablet {
                     height: calc(20vw + 370px);
                 }
 
-                @include desktop
-                {
+                @include desktop {
                     height: calc(45vw - 25px);
                 }
-
         }
      
-        &__title
-        {
+        &__title {
             @include fit;
-            // font-family: $font-global;
             font-weight: 600;
             padding-left: 1rem;
             font-size: 1.8rem;
             position: relative;
             color: $body-text;        
         
-                @include tablet
-                {
+                @include tablet {
                     font-size: 4.2rem;
                     padding: 1.9rem;
                 }
 
-                @include desktop
-                {
+                @include desktop {
                     font-size: 3.5rem;
                     padding-left: 6.5rem;
                 }
         }
 }
 
-.about
-{
+.about {
     height: auto;
     padding-left: 1rem;
     padding-right: 1rem;
         
-        @include tablet
-        {
+        @include tablet {
             padding-left: 2.2rem;
             padding-right: 2.2rem;
         }
 
-        @include desktop
-        {
+        @include desktop {
             padding-left: 10.2rem;
             padding-right: 10.2rem;
         }
 
-    &__title
-    {
-    // font-family: $font-global;
+    &__title {
     font-weight: 600;
     font-size: 1.8rem;
 
-        @include tablet
-        {
+        @include tablet {
             font-size: 2.7rem;
         }
-        @include desktop
-        {
+        @include desktop {
             font-size: 2.09rem;
             padding-top: 1rem;
             padding-bottom: 1rem;
@@ -218,12 +98,9 @@
             @include desktop {
                 height: 40vh;
                 width: 60vw;
-                // height: calc(60vh - 220px);
-                // width: calc(72vw - 100px);
             }
     }
     &__quote {
-    // font-family: $font-global;
     font-weight: 600;
     font-size: 1.12rem;
     line-height: 1.9rem;
@@ -240,7 +117,6 @@
             }
     }
     &__quoteby {
-        // font-family: $font-global;
         font-weight: 600;
         font-size: 1.1rem;
 
@@ -265,7 +141,6 @@
         }
     }
     &__title2 {
-        // font-family: $font-global;
         font-weight: 400;
         font-style: bold;
 
@@ -281,7 +156,6 @@
     }
 
     &__para {
-        // font-family: $font-global;
         font-weight: 400;
         line-height: 1.4rem;
         font-size: 1.05rem;
@@ -301,7 +175,6 @@
     }
 } 
 .gallery {
-    
     background-color: #FAFAFA;
     padding-top: 1.4rem;
 
@@ -314,7 +187,6 @@
     }
         &__title {
             @include margin-reset;
-            // font-family: "Avenir";
             font-size: 1.85rem;
             font-weight: 600;
             padding-left: 1rem;
@@ -364,7 +236,6 @@
         }
 }
 .comment {
-
     padding-left: 1rem;
     padding-right: 1rem;
     padding-bottom: 1rem;
@@ -391,7 +262,6 @@
         }
         @include desktop {
             width: 62%;
-            
         }
     }
     &__form {
@@ -399,15 +269,9 @@
         display: flex;
         border-bottom: .15rem solid #E1E1E1;
         padding-bottom: 2rem;
-        
-
+    
             @include tablet {
                 justify-content: center;
-            }
-
-            @include desktop {
-                // margin-right: 10rem;
-                // margin-left: 10rem;
             }
     }
 
@@ -441,7 +305,6 @@
             
     }
     &__formInputSection {
-
         @include tablet {
             flex-grow: 1;
         }
@@ -454,7 +317,6 @@
     }
 
     &__input1, &__input2 {
-
         font-size: 1.1rem;
         font-weight: 400;
         height: 2rem;
@@ -484,7 +346,6 @@
         }
 
     &__buttonEl {
-
         @include tablet {
         display: flex;
         justify-content: flex-end;
@@ -523,13 +384,6 @@
             @include tablet { 
                 width: 100%;
             }
-
-            @include desktop {
-            //    width: 72%;
-            //    margin-left: 10rem;
-            //    margin-right: 10rem;
-               
-            }
     }
     &__container {
         display: flex;
@@ -560,15 +414,21 @@
     }
     &__likesDiv {
         display: flex;
-        gap: 0.5rem;
-
+        gap: 1rem;
     }
     &__like:hover {
         filter: brightness(0.8);
     }
+    &__likesDisplay {
+        display: flex;
+        width: 50%;
+    }
     &__delete {
-        margin-left: 36rem;
-        
+        margin-left: 10rem;
+
+            @include tablet {
+                margin-left: 20rem;
+            }
     }
     &__date { 
         margin-top: 1.55rem;
@@ -597,175 +457,4 @@
                 margin-right: 1rem;;
             }
     }  
-}
-
-.footer
-{
-    @include fit;
-    position: relative;
-    background-color: $header-footer-background;
-    color: $header-footer-text;
-    // font-family: "Avenir";
-    padding: 1.2rem 0.5rem 1.2rem 0.6rem;
-
-        @include desktop {
-            padding: 2rem 0.5rem 1.2rem 5.5rem;
-        }
-
-    &__socialContent
-    {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-
-            @include tablet {
-            flex-direction: row;
-            }
-
-    }
-
-    address {
-        font-style: normal; /* Resetting the default (italic) style */
-    }
-   
-    &__head {
-        padding-top: 1.5rem;
-        padding-bottom: 0.5rem;
-        padding-left: 1rem;
-        padding-right: 1rem;
-
-            &--title {
-            // font-family: "Avenir";
-            font-weight: 600;
-            font-style: normal;
-            @include margin-reset;
-            font-size: 2rem;
-            color: $header-footer-text;
-
-                @include tablet {
-                    // font-family: "Avenir";
-                    font-weight: 600;
-                    font-size: 2.5rem;
-                }
-
-                @include desktop {
-                    font-weight: 400;
-                    font-size: 2rem;
-                }
-            }
-    }
-
-    &__media
-    {
-        display: flex;
-        align-content: flex-start;
-
-
-            @include tablet {
-                display: flex;
-                align-content: flex-start;
-            }
-            
-            @include desktop {
-                padding-left: 1.2rem;
-            }
-    
-        &--insta, &--facebook, &--twitter {
-            height: 2rem;
-            width: 2rem;
-            padding: 1.2rem;
-
-            &:hover {
-            transform: scale(1.1);
-            }
-
-                @include tablet {
-                    height: 1.6rem;
-                    width: 1.6rem;
-                    padding-top: 2.5rem;
-                }
-
-                @include desktop {
-                    height: 1.3rem;
-                    width: 1.3rem;
-                    padding-top: 2.1rem;
-                }
-        }
-    }
-    &__bandsitelogo {
-        height: 1.6rem;
-        padding: 1.2rem;
-        cursor: pointer;
-
-            @include tablet {
-               position: absolute;
-               height: 1.2rem;
-               top: 2.7rem;
-               right: 2rem; 
-            }
-
-            @include desktop {
-                height: 1rem;
-                right: 5.5rem;
-            }
-    }
-    &__contactbox
-    {
-            @include tablet {
-                display: flex;
-                flex-wrap: wrap;
-                padding-top: 1rem;
-                padding-bottom: 1rem; 
-            }
-
-            @include desktop {
-                gap: 1.75rem;
-            }
-        &--reachout1, &--reachout2, &--reachout3 {
-            // font-family: "Avenir";
-            font-weight: 400;
-            font-size: 1rem;
-            padding: 0.5rem;
-            line-height: 1.3rem;
-
-                @include tablet {
-                    font-size: 0.95rem;
-                    line-height: 1.5rem;
-                }
-
-                @include desktop {
-                    font-size: 0.8rem;
-                    line-height: 1.25rem;
-                }
-        }
-        &--reachout1-title, &--reachout1-info, &--reachout1-email,
-        &--reachout2-title, &--reachout2-info, &--reachout2-email,
-        &--reachout3-title, &--reachout3-info, &--reachout3-email {
-            @include margin-reset;
-             padding: 0.5rem;
-        } 
-    }
-    &__copyright {
-        &--info {
-            @include margin-reset;
-            // font-family: "Avenir";
-            font-weight: 400;
-            font-size: 0.9rem;
-            padding-top: 0.5rem;
-            padding-bottom: 1rem;
-            padding-left: 1rem;
-
-                @include tablet {
-                font-size: 0.95rem;
-                padding-top: 1.3rem;
-                padding-bottom: 1.3rem;
-                }
-
-                @include desktop {
-                    font-size: 0.8rem;
-                    padding-top: 1.5rem;
-                    padding-bottom: 1.5rem;
-                }
-        }
-    }
 }

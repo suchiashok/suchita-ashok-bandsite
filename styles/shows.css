@@ -112,6 +112,174 @@ html, body {
   }
 }
 
+.footer {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  background-color: #323232;
+  color: white;
+  padding: 1.2rem 0.5rem 1.2rem 0.6rem;
+}
+@media screen and (min-width: 1280px) {
+  .footer {
+    padding: 2rem 0.5rem 1.2rem 5.5rem;
+  }
+}
+.footer__socialContent {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+@media screen and (min-width: 768px) {
+  .footer__socialContent {
+    flex-direction: row;
+  }
+}
+.footer address {
+  font-style: normal; /* Resetting the default (italic) style */
+}
+.footer__head {
+  padding-top: 1.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.footer__head--title {
+  font-weight: 600;
+  font-style: normal;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  font-size: 2rem;
+  color: white;
+}
+@media screen and (min-width: 768px) {
+  .footer__head--title {
+    font-weight: 600;
+    font-size: 2.5rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer__head--title {
+    font-weight: 400;
+    font-size: 2rem;
+  }
+}
+.footer__media {
+  display: flex;
+  align-content: flex-start;
+}
+@media screen and (min-width: 768px) {
+  .footer__media {
+    display: flex;
+    align-content: flex-start;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer__media {
+    padding-left: 1.2rem;
+  }
+}
+.footer__media--insta, .footer__media--facebook, .footer__media--twitter {
+  height: 2rem;
+  width: 2rem;
+  padding: 1.2rem;
+}
+.footer__media--insta:hover, .footer__media--facebook:hover, .footer__media--twitter:hover {
+  transform: scale(1.1);
+}
+@media screen and (min-width: 768px) {
+  .footer__media--insta, .footer__media--facebook, .footer__media--twitter {
+    height: 1.6rem;
+    width: 1.6rem;
+    padding-top: 2.5rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer__media--insta, .footer__media--facebook, .footer__media--twitter {
+    height: 1.3rem;
+    width: 1.3rem;
+    padding-top: 2.1rem;
+  }
+}
+.footer__bandsitelogo {
+  height: 1.6rem;
+  padding: 1.2rem;
+  cursor: pointer;
+}
+@media screen and (min-width: 768px) {
+  .footer__bandsitelogo {
+    position: absolute;
+    height: 1.2rem;
+    top: 2.7rem;
+    right: 2rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer__bandsitelogo {
+    height: 1rem;
+    right: 5.5rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer__contactbox {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer__contactbox {
+    gap: 1.75rem;
+  }
+}
+.footer__contactbox--reachout1, .footer__contactbox--reachout2, .footer__contactbox--reachout3 {
+  font-weight: 400;
+  font-size: 1rem;
+  padding: 0.5rem;
+  line-height: 1.3rem;
+}
+@media screen and (min-width: 768px) {
+  .footer__contactbox--reachout1, .footer__contactbox--reachout2, .footer__contactbox--reachout3 {
+    font-size: 0.95rem;
+    line-height: 1.5rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer__contactbox--reachout1, .footer__contactbox--reachout2, .footer__contactbox--reachout3 {
+    font-size: 0.8rem;
+    line-height: 1.25rem;
+  }
+}
+.footer__contactbox--reachout1-title, .footer__contactbox--reachout1-info, .footer__contactbox--reachout1-email, .footer__contactbox--reachout2-title, .footer__contactbox--reachout2-info, .footer__contactbox--reachout2-email, .footer__contactbox--reachout3-title, .footer__contactbox--reachout3-info, .footer__contactbox--reachout3-email {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding: 0.5rem;
+}
+.footer__copyright--info {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  font-weight: 400;
+  font-size: 0.9rem;
+  padding-top: 0.5rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .footer__copyright--info {
+    font-size: 0.95rem;
+    padding-top: 1.3rem;
+    padding-bottom: 1.3rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer__copyright--info {
+    font-size: 0.8rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+}
+
 .hero {
   background-image: url(/assets/Images/hero-shows.jpg);
   background-size: cover;
@@ -378,172 +546,5 @@ html, body {
 @media screen and (min-width: 1280px) {
   .shows__button {
     width: 20%;
-  }
-}
-
-.footer {
-  margin: 0;
-  padding: 0;
-  position: relative;
-  background-color: #323232;
-  color: white;
-  padding: 1.2rem 0.5rem 1.2rem 0.6rem;
-}
-@media screen and (min-width: 1280px) {
-  .footer {
-    padding: 2rem 0.5rem 1.2rem 5.5rem;
-  }
-}
-.footer__socialContent {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-}
-@media screen and (min-width: 768px) {
-  .footer__socialContent {
-    flex-direction: row;
-  }
-}
-.footer address {
-  font-style: normal; /* Resetting the default (italic) style */
-}
-.footer__head {
-  padding-top: 1.5rem;
-  padding-bottom: 0.5rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-.footer__head--title {
-  font-weight: 600;
-  font-style: normal;
-  margin-block-start: 0;
-  margin-block-end: 0;
-  font-size: 2rem;
-  color: white;
-}
-@media screen and (min-width: 768px) {
-  .footer__head--title {
-    font-weight: 600;
-    font-size: 2.5rem;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .footer__head--title {
-    font-weight: 400;
-    font-size: 2rem;
-  }
-}
-.footer__media {
-  display: flex;
-  align-content: flex-start;
-}
-@media screen and (min-width: 768px) {
-  .footer__media {
-    display: flex;
-    align-content: flex-start;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .footer__media {
-    padding-left: 1.2rem;
-  }
-}
-.footer__media--insta, .footer__media--facebook, .footer__media--twitter {
-  height: 2rem;
-  width: 2rem;
-  padding: 1.2rem;
-}
-.footer__media--insta:hover, .footer__media--facebook:hover, .footer__media--twitter:hover {
-  transform: scale(1.1);
-}
-@media screen and (min-width: 768px) {
-  .footer__media--insta, .footer__media--facebook, .footer__media--twitter {
-    height: 1.6rem;
-    width: 1.6rem;
-    padding-top: 2.5rem;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .footer__media--insta, .footer__media--facebook, .footer__media--twitter {
-    height: 1.3rem;
-    width: 1.3rem;
-    padding-top: 2.1rem;
-  }
-}
-.footer__media--bandsitelogo {
-  height: 1.6rem;
-  padding: 1.2rem;
-}
-@media screen and (min-width: 768px) {
-  .footer__media--bandsitelogo {
-    position: absolute;
-    height: 1.2rem;
-    top: 2.7rem;
-    right: 2rem;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .footer__media--bandsitelogo {
-    height: 1rem;
-    right: 5.5rem;
-  }
-}
-@media screen and (min-width: 768px) {
-  .footer__contactbox {
-    display: flex;
-    flex-wrap: wrap;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .footer__contactbox {
-    gap: 1.75rem;
-  }
-}
-.footer__contactbox--reachout1, .footer__contactbox--reachout2, .footer__contactbox--reachout3 {
-  font-weight: 400;
-  font-size: 1rem;
-  padding: 0.5rem;
-  line-height: 1.3rem;
-}
-@media screen and (min-width: 768px) {
-  .footer__contactbox--reachout1, .footer__contactbox--reachout2, .footer__contactbox--reachout3 {
-    font-size: 0.95rem;
-    line-height: 1.5rem;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .footer__contactbox--reachout1, .footer__contactbox--reachout2, .footer__contactbox--reachout3 {
-    font-size: 0.8rem;
-    line-height: 1.25rem;
-  }
-}
-.footer__contactbox--reachout1-title, .footer__contactbox--reachout1-info, .footer__contactbox--reachout1-email, .footer__contactbox--reachout2-title, .footer__contactbox--reachout2-info, .footer__contactbox--reachout2-email, .footer__contactbox--reachout3-title, .footer__contactbox--reachout3-info, .footer__contactbox--reachout3-email {
-  margin-block-start: 0;
-  margin-block-end: 0;
-  padding: 0.5rem;
-}
-.footer__copyright--info {
-  margin-block-start: 0;
-  margin-block-end: 0;
-  font-weight: 400;
-  font-size: 0.9rem;
-  padding-top: 0.5rem;
-  padding-bottom: 1rem;
-  padding-left: 1rem;
-}
-@media screen and (min-width: 768px) {
-  .footer__copyright--info {
-    font-size: 0.95rem;
-    padding-top: 1.3rem;
-    padding-bottom: 1.3rem;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .footer__copyright--info {
-    font-size: 0.8rem;
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
   }
 }/*# sourceMappingURL=shows.css.map */
