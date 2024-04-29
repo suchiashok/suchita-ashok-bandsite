@@ -265,6 +265,7 @@
         }
     }
     &__form {
+        font-family: 400;
         padding-right: 1.5rem;
         display: flex;
         border-bottom: .15rem solid #E1E1E1;
@@ -327,6 +328,7 @@
         border: .125rem solid #E1E1E1;
         background-color:#FAFAFA;
         border-radius: 0.3rem;
+        
 
             &::placeholder {
                 color: black;
@@ -334,7 +336,6 @@
                 top: 0.9rem;
                 left: 0.8rem;   
             }
-
                 @include tablet {
                     width: 100%;
                     font-size: 0.9rem;
@@ -342,7 +343,7 @@
     }
 
     &__input2 {
-        height: 6rem; //setting different height for comment's input
+        padding-bottom: 6rem;
         }
 
     &__buttonEl {

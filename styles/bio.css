@@ -573,6 +573,7 @@ html, body {
   }
 }
 .comment__form {
+  font-family: 400;
   padding-right: 1.5rem;
   display: flex;
   border-bottom: 0.15rem solid #E1E1E1;
@@ -653,7 +654,7 @@ html, body {
   }
 }
 .comment__input2 {
-  height: 6rem;
+  padding-bottom: 6rem;
 }
 @media screen and (min-width: 768px) {
   .comment__buttonEl {

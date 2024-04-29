@@ -7,7 +7,6 @@ const commentPost = document.createElement("div");
 commentPost.classList.add("comment__post");
 document.querySelector(".comment__formAndPost").appendChild(commentPost);
 
-
 async function renderNewComments() {
     try {
         const comments = await BandApi.getComment();
@@ -54,6 +53,7 @@ commentLikesDiv.classList.add("comment__likesDiv");
 const commentLike = document.createElement("img");
 commentLike.classList.add("comment__like");
 commentLike.setAttribute("src", "/assets/Icons/SVG/icon-like.svg");
+commentLike.setAttribute("alt", "commentLikeIcon");
 
 const commentLikesDisplay = document.createElement("p");
 commentLikesDisplay.classList.add("comment__likesDisplay");
@@ -62,6 +62,7 @@ commentLikesDisplay.textContent = `${commentObj.likes} likes`;
 const commentDelete = document.createElement("img");
 commentDelete.classList.add("comment__delete");
 commentDelete.setAttribute("src", "/assets/Icons/SVG/icon-delete.svg");
+commentDelete.setAttribute("alt", "commentDeleteIcon");
 
 const commentDate = document.createElement("time");
 commentDate.classList.add("comment__date");
