@@ -34,4 +34,24 @@ export default class BandSiteApi {
             console.log('Error fetching the shows', error);
         } 
     }
+//method for comment like functionality
+    async likeComment(commentId) {
+        try {
+            const response = await axios.put(`${this.baseUrl}comments/${commentId}/like?api_key=${this.apiKey}`)
+            return response.data;
+        }
+        catch(error) {
+            console.log('Error displaying likes', error);
+        }
+    }
+//method for comment delete functionality
+    async deleteComment(commentId) {
+        try {
+            const response = await axios.delete(`${this.baseUrl}comments/${commentId}?api_key=${this.apiKey}`)
+            return response.data;
+        }
+        catch(error) {
+            console.log('Error deleting comment', error);
+        }
+    }
 }

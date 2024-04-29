@@ -145,7 +145,6 @@ html, body {
 .hero__title {
   margin: 0;
   padding: 0;
-  font-family: "Avenir";
   font-weight: 600;
   padding-left: 1rem;
   font-size: 1.8rem;
@@ -183,7 +182,6 @@ html, body {
   }
 }
 .about__title {
-  font-family: "Avenir";
   font-weight: 600;
   font-size: 1.8rem;
 }
@@ -221,7 +219,6 @@ html, body {
   }
 }
 .about__quote {
-  font-family: "Avenir";
   font-weight: 600;
   font-size: 1.12rem;
   line-height: 1.9rem;
@@ -240,7 +237,6 @@ html, body {
   }
 }
 .about__quoteby {
-  font-family: "Avenir";
   font-weight: 600;
   font-size: 1.1rem;
 }
@@ -267,7 +263,6 @@ html, body {
   }
 }
 .about__title2 {
-  font-family: "Avenir";
   font-weight: 400;
   font-style: bold;
 }
@@ -286,7 +281,6 @@ html, body {
   }
 }
 .about__para {
-  font-family: "Avenir";
   font-weight: 400;
   line-height: 1.4rem;
   font-size: 1.05rem;
@@ -326,7 +320,6 @@ html, body {
 .gallery__title {
   margin-block-start: 0;
   margin-block-end: 0;
-  font-family: "Avenir";
   font-size: 1.85rem;
   font-weight: 600;
   padding-left: 1rem;
@@ -399,10 +392,15 @@ html, body {
     padding-right: 13rem;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 768px) {
   .comment__formAndPost {
     display: flex;
     flex-direction: column;
+    width: 95%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .comment__formAndPost {
     width: 62%;
   }
 }
@@ -423,13 +421,14 @@ html, body {
 }
 @media screen and (min-width: 768px) {
   .comment__title {
-    font-size: 3rem;
+    font-size: 2.5rem;
+    margin-right: 9rem;
   }
 }
 @media screen and (min-width: 1280px) {
   .comment__title {
     font-size: 2.5rem;
-    margin-right: 25rem;
+    margin-right: 30rem;
   }
 }
 .comment__profileIcon {
@@ -461,7 +460,6 @@ html, body {
   height: 2rem;
   width: 95%;
   margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
   padding: 0.5rem;
   margin-bottom: 1.2rem;
   border: 0.125rem solid #E1E1E1;
@@ -562,6 +560,16 @@ html, body {
     flex-wrap: wrap;
   }
 }
+.comment__likesDiv {
+  display: flex;
+  gap: 0.5rem;
+}
+.comment__like:hover {
+  filter: brightness(0.8);
+}
+.comment__delete {
+  margin-left: 36rem;
+}
 .comment__date {
   margin-top: 1.55rem;
   font-weight: 400;
@@ -575,14 +583,15 @@ html, body {
 }
 .comment__content {
   margin-top: 0;
+  margin-bottom: 0.5rem;
   flex-grow: 1;
 }
 .comment__icon {
   margin-top: 1.5rem;
   margin-right: 2rem;
   background-color: #E1E1E1;
-  height: 45px;
-  width: 4.2041rem;
+  height: 2.9375rem;
+  width: 3.4rem;
   border-radius: 50%;
 }
 @media screen and (min-width: 1280px) {
@@ -597,7 +606,6 @@ html, body {
   position: relative;
   background-color: #323232;
   color: white;
-  font-family: "Avenir";
   padding: 1.2rem 0.5rem 1.2rem 0.6rem;
 }
 @media screen and (min-width: 1280px) {
@@ -625,7 +633,6 @@ html, body {
   padding-right: 1rem;
 }
 .footer__head--title {
-  font-family: "Avenir";
   font-weight: 600;
   font-style: normal;
   margin-block-start: 0;
@@ -635,7 +642,6 @@ html, body {
 }
 @media screen and (min-width: 768px) {
   .footer__head--title {
-    font-family: "Avenir";
     font-weight: 600;
     font-size: 2.5rem;
   }
@@ -683,12 +689,13 @@ html, body {
     padding-top: 2.1rem;
   }
 }
-.footer__media--bandsitelogo {
+.footer__bandsitelogo {
   height: 1.6rem;
   padding: 1.2rem;
+  cursor: pointer;
 }
 @media screen and (min-width: 768px) {
-  .footer__media--bandsitelogo {
+  .footer__bandsitelogo {
     position: absolute;
     height: 1.2rem;
     top: 2.7rem;
@@ -696,7 +703,7 @@ html, body {
   }
 }
 @media screen and (min-width: 1280px) {
-  .footer__media--bandsitelogo {
+  .footer__bandsitelogo {
     height: 1rem;
     right: 5.5rem;
   }
@@ -715,7 +722,6 @@ html, body {
   }
 }
 .footer__contactbox--reachout1, .footer__contactbox--reachout2, .footer__contactbox--reachout3 {
-  font-family: "Avenir";
   font-weight: 400;
   font-size: 1rem;
   padding: 0.5rem;
@@ -741,7 +747,6 @@ html, body {
 .footer__copyright--info {
   margin-block-start: 0;
   margin-block-end: 0;
-  font-family: "Avenir";
   font-weight: 400;
   font-size: 0.9rem;
   padding-top: 0.5rem;

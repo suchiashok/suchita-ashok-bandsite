@@ -144,7 +144,7 @@
         &__title
         {
             @include fit;
-            font-family: "Avenir";
+            // font-family: $font-global;
             font-weight: 600;
             padding-left: 1rem;
             font-size: 1.8rem;
@@ -185,7 +185,7 @@
 
     &__title
     {
-    font-family: "Avenir";
+    // font-family: $font-global;
     font-weight: 600;
     font-size: 1.8rem;
 
@@ -223,7 +223,7 @@
             }
     }
     &__quote {
-    font-family: "Avenir";
+    // font-family: $font-global;
     font-weight: 600;
     font-size: 1.12rem;
     line-height: 1.9rem;
@@ -240,7 +240,7 @@
             }
     }
     &__quoteby {
-        font-family: "Avenir";
+        // font-family: $font-global;
         font-weight: 600;
         font-size: 1.1rem;
 
@@ -265,7 +265,7 @@
         }
     }
     &__title2 {
-        font-family: "Avenir";
+        // font-family: $font-global;
         font-weight: 400;
         font-style: bold;
 
@@ -281,7 +281,7 @@
     }
 
     &__para {
-        font-family: "Avenir";
+        // font-family: $font-global;
         font-weight: 400;
         line-height: 1.4rem;
         font-size: 1.05rem;
@@ -314,7 +314,7 @@
     }
         &__title {
             @include margin-reset;
-            font-family: "Avenir";
+            // font-family: "Avenir";
             font-size: 1.85rem;
             font-weight: 600;
             padding-left: 1rem;
@@ -383,9 +383,13 @@
         }
     
     &__formAndPost {
-        @include desktop {
+
+        @include tablet {
             display: flex;
-            flex-direction: column;
+            flex-direction: column; 
+            width: 95%;
+        }
+        @include desktop {
             width: 62%;
             
         }
@@ -412,12 +416,13 @@
         font-size: 2.1rem;
 
             @include tablet { 
-                font-size: 3rem;
+                font-size: 2.5rem;
+                margin-right: 9rem;
             }
 
             @include desktop {
                 font-size: 2.5rem;
-                margin-right: 25rem;
+                margin-right: 30rem;
             }
     }
 
@@ -455,7 +460,6 @@
         height: 2rem;
         width: 95%;
         margin-top: 0.5rem;
-        margin-bottom: 0.5rem;
         padding: 0.5rem;
         margin-bottom: 1.2rem;
         border: .125rem solid #E1E1E1;
@@ -554,6 +558,18 @@
                 flex-wrap: wrap;
             }
     }
+    &__likesDiv {
+        display: flex;
+        gap: 0.5rem;
+
+    }
+    &__like:hover {
+        filter: brightness(0.8);
+    }
+    &__delete {
+        margin-left: 36rem;
+        
+    }
     &__date { 
         margin-top: 1.55rem;
         font-weight: 400;
@@ -566,14 +582,15 @@
     }
     &__content {
         margin-top: 0;
+        margin-bottom: 0.5rem;
         flex-grow: 1;
     }
     &__icon {
         margin-top: 1.5rem;
         margin-right: 2rem;
         background-color: #E1E1E1;
-        height: 45px;
-        width: 4.2041rem;
+        height: 2.9375rem;
+        width: 3.4rem;
         border-radius: 50%;
 
             @include desktop { 
@@ -588,7 +605,7 @@
     position: relative;
     background-color: $header-footer-background;
     color: $header-footer-text;
-    font-family: "Avenir";
+    // font-family: "Avenir";
     padding: 1.2rem 0.5rem 1.2rem 0.6rem;
 
         @include desktop {
@@ -618,7 +635,7 @@
         padding-right: 1rem;
 
             &--title {
-            font-family: "Avenir";
+            // font-family: "Avenir";
             font-weight: 600;
             font-style: normal;
             @include margin-reset;
@@ -626,7 +643,7 @@
             color: $header-footer-text;
 
                 @include tablet {
-                    font-family: "Avenir";
+                    // font-family: "Avenir";
                     font-weight: 600;
                     font-size: 2.5rem;
                 }
@@ -674,22 +691,23 @@
                     padding-top: 2.1rem;
                 }
         }
-        &--bandsitelogo {
-            height: 1.6rem;
-            padding: 1.2rem;
+    }
+    &__bandsitelogo {
+        height: 1.6rem;
+        padding: 1.2rem;
+        cursor: pointer;
 
-                @include tablet {
-                   position: absolute;
-                   height: 1.2rem;
-                   top: 2.7rem;
-                   right: 2rem; 
-                }
+            @include tablet {
+               position: absolute;
+               height: 1.2rem;
+               top: 2.7rem;
+               right: 2rem; 
+            }
 
-                @include desktop {
-                    height: 1rem;
-                    right: 5.5rem;
-                }
-        }
+            @include desktop {
+                height: 1rem;
+                right: 5.5rem;
+            }
     }
     &__contactbox
     {
@@ -704,7 +722,7 @@
                 gap: 1.75rem;
             }
         &--reachout1, &--reachout2, &--reachout3 {
-            font-family: "Avenir";
+            // font-family: "Avenir";
             font-weight: 400;
             font-size: 1rem;
             padding: 0.5rem;
@@ -730,7 +748,7 @@
     &__copyright {
         &--info {
             @include margin-reset;
-            font-family: "Avenir";
+            // font-family: "Avenir";
             font-weight: 400;
             font-size: 0.9rem;
             padding-top: 0.5rem;

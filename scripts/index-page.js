@@ -49,9 +49,45 @@ const commentContent = document.createElement("p");
 commentContent.classList.add("comment__content");
 commentContent.textContent = commentObj.comment;
 
+//testing like
+const commentLikesDiv = document.createElement("div");
+commentLikesDiv.classList.add("comment__likesDiv");
+
+const commentLike = document.createElement("img");
+commentLike.classList.add("comment__like");
+commentLike.setAttribute("src", "/assets/Icons/SVG/icon-like.svg");
+
+const commentLikesDisplay = document.createElement("p");
+commentLikesDisplay.classList.add("comment__likesDisplay");
+commentLikesDisplay.textContent = `${commentObj.likes} likes`;
+
+const commentDelete = document.createElement("img");
+commentDelete.classList.add("comment__delete");
+commentDelete.setAttribute("src", "/assets/Icons/SVG/icon-delete.svg");
+
 const commentDate = document.createElement("time");
 commentDate.classList.add("comment__date");
 commentDate.innerText = formatDate(commentObj.timestamp);
+
+//event listener for like comments
+commentLike.addEventListener("click", async () => {
+    try {
+        await BandApi.likeComment(commentObj.id);
+        await renderNewComments();
+    } catch(error) {
+        console.log("Error getting likes", error);
+    }
+    });
+
+//event listener for deleting comments 
+commentDelete.addEventListener("click", async () => {
+    try {
+        await BandApi.deleteComment(commentObj.id);
+        await renderNewComments();
+    } catch (error) {
+        console.log("Error deleting the comment", error);
+    }
+});
 
 commentPost.appendChild(commentContainer);
 commentContainer.appendChild(commentIcon);
@@ -59,6 +95,10 @@ commentContainer.appendChild(commentMainComment);
 commentMainComment.appendChild(commentNameDateDiv);
 commentNameDateDiv.appendChild(commentName);
 commentMainComment.appendChild(commentContent);
+commentMainComment.appendChild(commentLikesDiv);
+commentLikesDiv.appendChild(commentLike);
+commentLikesDiv.appendChild(commentLikesDisplay);
+commentLikesDiv.appendChild(commentDelete);
 commentNameDateDiv.appendChild(commentDate);
 }
 
