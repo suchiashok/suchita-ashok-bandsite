@@ -3,7 +3,7 @@
 
 html, body {
     @include fit;
-    font-family: $font-global;
+    font-family: $font-global, Arial, sans-serif;
 }
 
 .navbar {
@@ -124,7 +124,6 @@ html, body {
     address {
         font-style: normal; /* Resetting the default (italic) style */
     }
-   
     &__head {
         padding-top: 1.5rem;
         padding-bottom: 0.5rem;
@@ -149,13 +148,10 @@ html, body {
                 }
             }
     }
-
     &__media
     {
         display: flex;
         align-content: flex-start;
-
-
             @include tablet {
                 display: flex;
                 align-content: flex-start;
@@ -164,28 +160,27 @@ html, body {
             @include desktop {
                 padding-left: 1.2rem;
             }
-    
-        &--insta, &--facebook, &--twitter {
-            height: 2rem;
-            width: 2rem;
-            padding: 1.2rem;
+    }
+    &__media-icon {
+        height: 2rem;
+        width: 2rem;
+        padding: 1.2rem;
 
-            &:hover {
-            transform: scale(1.1);
+        &:hover {
+        transform: scale(1.1);
+        }
+
+            @include tablet {
+                height: 1.6rem;
+                width: 1.6rem;
+                padding-top: 2.5rem;
             }
 
-                @include tablet {
-                    height: 1.6rem;
-                    width: 1.6rem;
-                    padding-top: 2.5rem;
-                }
-
-                @include desktop {
-                    height: 1.3rem;
-                    width: 1.3rem;
-                    padding-top: 2.1rem;
-                }
-        }
+            @include desktop {
+                height: 1.3rem;
+                width: 1.3rem;
+                padding-top: 2.1rem;
+            }
     }
     &__bandsitelogo {
         height: 1.6rem;
@@ -216,31 +211,28 @@ html, body {
             @include desktop {
                 gap: 1.75rem;
             }
-        &--reachout1, &--reachout2, &--reachout3 {
-            font-weight: 400;
-            font-size: 1rem;
-            padding: 0.5rem;
-            line-height: 1.3rem;
-
-                @include tablet {
-                    font-size: 0.95rem;
-                    line-height: 1.5rem;
-                }
-
-                @include desktop {
-                    font-size: 0.8rem;
-                    line-height: 1.25rem;
-                }
-        }
-        &--reachout1-title, &--reachout1-info, &--reachout1-email,
-        &--reachout2-title, &--reachout2-info, &--reachout2-email,
-        &--reachout3-title, &--reachout3-info, &--reachout3-email {
-            @include margin-reset;
-             padding: 0.5rem;
-        } 
     }
-    &__copyright {
-        &--info {
+    &__contactbox-reachout {
+        font-weight: 400;
+        font-size: 1rem;
+        padding: 0.5rem;
+        line-height: 1.3rem;
+
+            @include tablet {
+                font-size: 0.95rem;
+                line-height: 1.5rem;
+            }
+
+            @include desktop {
+                font-size: 0.8rem;
+                line-height: 1.25rem;
+            }
+    }
+    &__contactbox-info {
+        @include margin-reset;
+         padding: 0.5rem;
+    } 
+    &__copyright-info {
             @include margin-reset;
             font-weight: 400;
             font-size: 0.9rem;
@@ -253,7 +245,6 @@ html, body {
                 padding-top: 1.3rem;
                 padding-bottom: 1.3rem;
                 }
-
                 @include desktop {
                     font-size: 0.8rem;
                     padding-top: 1.5rem;
@@ -261,4 +252,3 @@ html, body {
                 }
         }
     }
-}

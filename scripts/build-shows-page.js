@@ -2,7 +2,6 @@ import BandSiteApi from "./band-site-api.js";
 
 const BandApi = new BandSiteApi("37a62273-2e78-413f-befb-0357b75e2328");
 
-
 const main = document.querySelector('main');
 const showsSection = document.createElement("section");
 showsSection.classList.add("shows");

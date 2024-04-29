@@ -16,7 +16,7 @@
 html, body {
   margin: 0;
   padding: 0;
-  font-family: "Avenir";
+  font-family: "Avenir", Arial, sans-serif;
 }
 
 .navbar {
@@ -179,23 +179,23 @@ html, body {
     padding-left: 1.2rem;
   }
 }
-.footer__media--insta, .footer__media--facebook, .footer__media--twitter {
+.footer__media-icon {
   height: 2rem;
   width: 2rem;
   padding: 1.2rem;
 }
-.footer__media--insta:hover, .footer__media--facebook:hover, .footer__media--twitter:hover {
+.footer__media-icon:hover {
   transform: scale(1.1);
 }
 @media screen and (min-width: 768px) {
-  .footer__media--insta, .footer__media--facebook, .footer__media--twitter {
+  .footer__media-icon {
     height: 1.6rem;
     width: 1.6rem;
     padding-top: 2.5rem;
   }
 }
 @media screen and (min-width: 1280px) {
-  .footer__media--insta, .footer__media--facebook, .footer__media--twitter {
+  .footer__media-icon {
     height: 1.3rem;
     width: 1.3rem;
     padding-top: 2.1rem;
@@ -233,30 +233,30 @@ html, body {
     gap: 1.75rem;
   }
 }
-.footer__contactbox--reachout1, .footer__contactbox--reachout2, .footer__contactbox--reachout3 {
+.footer__contactbox-reachout {
   font-weight: 400;
   font-size: 1rem;
   padding: 0.5rem;
   line-height: 1.3rem;
 }
 @media screen and (min-width: 768px) {
-  .footer__contactbox--reachout1, .footer__contactbox--reachout2, .footer__contactbox--reachout3 {
+  .footer__contactbox-reachout {
     font-size: 0.95rem;
     line-height: 1.5rem;
   }
 }
 @media screen and (min-width: 1280px) {
-  .footer__contactbox--reachout1, .footer__contactbox--reachout2, .footer__contactbox--reachout3 {
+  .footer__contactbox-reachout {
     font-size: 0.8rem;
     line-height: 1.25rem;
   }
 }
-.footer__contactbox--reachout1-title, .footer__contactbox--reachout1-info, .footer__contactbox--reachout1-email, .footer__contactbox--reachout2-title, .footer__contactbox--reachout2-info, .footer__contactbox--reachout2-email, .footer__contactbox--reachout3-title, .footer__contactbox--reachout3-info, .footer__contactbox--reachout3-email {
+.footer__contactbox-info {
   margin-block-start: 0;
   margin-block-end: 0;
   padding: 0.5rem;
 }
-.footer__copyright--info {
+.footer__copyright-info {
   margin-block-start: 0;
   margin-block-end: 0;
   font-weight: 400;
@@ -266,14 +266,14 @@ html, body {
   padding-left: 1rem;
 }
 @media screen and (min-width: 768px) {
-  .footer__copyright--info {
+  .footer__copyright-info {
     font-size: 0.95rem;
     padding-top: 1.3rem;
     padding-bottom: 1.3rem;
   }
 }
 @media screen and (min-width: 1280px) {
-  .footer__copyright--info {
+  .footer__copyright-info {
     font-size: 0.8rem;
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
